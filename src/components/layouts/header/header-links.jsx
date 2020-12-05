@@ -38,26 +38,51 @@ class ListOfLinks extends Component {
                 id: '1',
                 name: t('aboutMe'),
                 path: '#aboutMe',
+                icon: null,
             },
             {
                 id: '2',
                 name: t('education'),
                 path: '/',
+                icon: null,
             },
             {
                 id: '3',
                 name: t('blog'),
+                path: '/',
+                icon: null,
+            },
+            {
+                id: '4',
+                name: t('gallery'),
+                path: '/',
+                icon: null,
+            },
+            {
+                id: '5',
+                name: t('boxes'),
+                path: '/',
+                icon: null,
+            },
+            {
+                id: '6',
+                name: t('contacts'),
+                path: '/',
+                icon: null,
             },
         ];
 
         return (
             <ul className={classNameList}>
                 {links.map(item => {
-                    const { name, path, id } = item;
+                    const {
+                        name, path, id, icon,
+                    } = item;
 
                     return (
                         <li key={id} className={classNameItem}>
                             <AnchorLink href={path}>{name}</AnchorLink>
+                            {icon ? <img src={icon} alt="icon" /> : null}
                         </li>
                     );
                 })}

@@ -51,6 +51,7 @@
         align-items: center;
 
         &_item {
+            position: relative;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -67,6 +68,13 @@
                 &>a {
                     color: $shakespeareColor;
                 }
+            }
+
+            img {
+                position: absolute;
+                width: 2vw;
+                top: -1vw;
+                right: -0.5vw;
             }
         }
 
