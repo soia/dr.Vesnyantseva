@@ -1,0 +1,699 @@
+@import '../assets/styles/variables';
+@import '../assets/styles/reset.scss';
+@import '~antd/dist/antd.css';
+
+html {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    overflow-y: overlay;
+    overflow-x: hidden;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    font-family: $Rounded500;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// remove arrows for input type number
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input {
+    -webkit-appearance: none;
+}
+
+// custom scrollbar
+
+::-webkit-scrollbar {
+    width: 0.2vw;
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: #19192d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $fuchsiaBlueColor;
+    border-radius: 2.5vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $fuchsiaBlueColor;
+}
+
+// custom scrollbar
+
+// hide transparent on focus
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+// hide transparent on focus
+
+.ant-message span {
+    font-family: $Rounded500;
+    color: $fuchsiaBlueColor;
+    font-size: $desctop14px;
+    z-index: 9999999;
+
+    @media only screen and (max-width: 499px) {
+        font-size: 3.5vw;
+    }
+}
+
+// remove input number arrows firefox
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+// remove input number arrows firefox
+
+// react-notification
+
+.react-notification-root {
+    top: 0;
+}
+
+.notification-item {
+    border-left: none !important;
+}
+
+#root .notification-item .notification-message,
+.notification-item .notification-title {
+    font-size: 1vw;
+
+    @media only screen and (max-width: 499px) {
+        font-size: 5vw !important;
+    }
+}
+
+#root .react-notification-root {
+    z-index: 999999999;
+
+    .notification-content {
+        min-height: 4.24vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .notification-default {
+        border-left: 8px solid #2a1f84;
+    }
+
+    .notification-success {
+        border-left: 8px solid #96df6a;
+    }
+}
+
+.notification-message,
+.notification-title {
+    font-family: $Rounded500;
+}
+
+// react-notification
+
+select {
+    @media only screen and (max-width: 499px) {
+        font-size: 50px;
+    }
+}
+
+// change autofill background totransparent
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: $whiteColor !important;
+}
+
+#profile input:-webkit-autofill,
+#profile input:-webkit-autofill:hover,
+#profile input:-webkit-autofill:focus,
+#profile input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: $fuchsiaBlueColor !important;
+}
+
+// change autofill background totransparent
+
+/* FF, IE7+, chrome (except button) */
+
+input[type='file'],
+input[type='file']::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+// ant checkbox
+
+.ant-checkbox {
+
+    input[type='radio'],
+    input[type='checkbox'] {
+        width: $desctop16px;
+        height: $desctop16px;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile16px;
+            height: $mobile16px;
+        }
+    }
+
+    .ant-checkbox-inner {
+        width: $desctop16px;
+        height: $desctop16px;
+        border: $desctop1px solid $whiteColor;
+        border-radius: 50%;
+        background-color: transparent;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile16px;
+            height: $mobile16px;
+            border: $mobile1px solid $whiteColor;
+        }
+    }
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $fuchsiaBlueColor;
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus+.ant-checkbox-inner {
+    border: $desctop1px solid $fuchsiaBlueColor;
+
+    @media only screen and (max-width: 499px) {
+        border: $mobile1px solid $fuchsiaBlueColor;
+    }
+}
+
+.ant-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.ant-checkbox-checked::after {
+    border: none;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+    border: 0.13vw solid #fff;
+    border-top: 0;
+    border-left: 0;
+    top: 44%;
+    left: 24%;
+    width: 0.3vw;
+    height: 0.65vw;
+
+    @media only screen and (max-width: 499px) {
+        border: $mobile2px solid #fff;
+        border-top: 0;
+        border-left: 0;
+        width: $mobile6px;
+        height: 3vw;
+        top: 43%;
+        left: 22%;
+    }
+}
+
+.ant-checkbox+span {
+    padding: 0 0 0 $desctop10px;
+    top: -0.09em;
+    position: relative;
+
+    @media only screen and (max-width: 499px) {
+        padding: 0 0 0 $mobile10px;
+    }
+}
+
+// ant checkbox
+
+// ant drawer
+
+.drawer {
+    &__vectorIcon {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        width: 77.78vw;
+        height: 111.112vw;
+    }
+
+    &__closeIcon {
+        width: $mobile20px;
+        height: $mobile20px;
+        padding: $mobile17px;
+        box-sizing: content-box;
+    }
+
+    #aside {
+        @media only screen and (max-width: 499px) {
+            display: block;
+            width: 100%;
+            padding: $mobile10px 0 0 $mobile17px;
+            position: relative;
+            z-index: 2;
+            background: transparent;
+        }
+    }
+
+    .ant-drawer-body {
+        padding: 0 $mobile17px $mobile17px 0;
+        height: 100vh;
+        overflow: auto;
+        background: $fuchsiaBlueColor;
+    }
+}
+
+// ant drawer
+
+// react-notification
+
+.react-notification-root {
+    top: 0;
+}
+
+.notification-item {
+    border-left: none !important;
+}
+
+#root .react-notification-root {
+    z-index: 999999999;
+
+    .notification-content {
+        min-height: 4.24vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .notification-default {
+        border-left: 8px solid #2a1f84;
+    }
+
+    .notification-success {
+        border-left: 8px solid #29ad4e;
+    }
+}
+
+.notification-message,
+.notification-title {
+    font-family: $Rounded500;
+}
+
+// react-notification
+
+// wallet-countdown
+
+#root .wallet-countdown {
+    position: absolute;
+    top: -4.1vw;
+    right: 0;
+    border: $desctop2px solid $fuchsiaBlueColor;
+    border-radius: 1.8vw;
+    padding: $desctop26px $desctop26px;
+    width: 21.39vw;
+
+    @media only screen and (max-width: 499px) {
+        position: static;
+        width: 100%;
+        margin-bottom: 30px;
+        border: $mobile2px solid $fuchsiaBlueColor;
+        border-radius: $mobile25px;
+        padding: $mobile20px 7vw;
+    }
+
+    &__title {
+        font-family: $Rounded500;
+        font-size: $desctop18px;
+        line-height: 140%;
+        letter-spacing: 0.225em;
+        color: $fuchsiaBlueColor;
+        text-transform: uppercase;
+        margin: 0 0 1.7vw 0;
+        text-align: center;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile12px;
+            margin-bottom: $mobile10px;
+            line-height: 150%;
+        }
+    }
+
+    span {
+        font-family: $Rounded500;
+        font-size: $desctop36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $fuchsiaBlueColor;
+        letter-spacing: 0.5vw;
+        transform: translateX(0.3vw);
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile24px;
+        }
+    }
+}
+
+// wallet-countdown
+
+// tooltip
+.ant-tooltip {
+    max-width: initial;
+}
+
+.ant-tooltip-inner {
+    background-color: #313162;
+    font-family: 'Rounded500', Arial, Helvetica, sans-serif;
+}
+
+.ant-tooltip-placement-top .ant-tooltip-arrow,
+.ant-tooltip-placement-topLeft .ant-tooltip-arrow,
+.ant-tooltip-placement-topRight .ant-tooltip-arrow {
+    border-top-color: #313162;
+}
+
+.ant-tooltip-arrow::before {
+    background-color: #313162;
+}
+
+// tooltip
+
+header #selectLangeage div:hover {
+    color: #fff;
+}
+
+#header #selectLangeage img {
+    @media only screen and (max-width: 499px) {
+        margin-right: 4vw;
+    }
+}
+
+#login #footer {
+    @media only screen and (max-width: 499px) {
+        display: none;
+    }
+}
+
+// ant.design tab
+.ant-tabs-tab {
+    font-family: $Rounded500;
+    font-size: $desctop13px;
+    line-height: $desctop19px;
+    color: $fuchsiaBlueColor;
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile13px;
+        line-height: $mobile19px;
+    }
+}
+
+.ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-nav .ant-tabs-tab:hover {
+    color: $fuchsiaBlueColor;
+}
+
+.ant-tabs-ink-bar {
+    height: $desctop2px;
+    background-color: $fuchsiaBlueColor;
+
+    @media only screen and (max-width: 499px) {
+        height: $mobile2px;
+    }
+}
+
+.ant-tabs-bar {
+    border-bottom: $desctop1px solid $fuchsiaBlueColor;
+
+    @media only screen and (max-width: 499px) {
+        border-bottom: $mobile1px solid $fuchsiaBlueColor;
+    }
+}
+
+// ant.design tab
+
+//highcharts
+
+.highcharts-container,
+.highcharts-root {
+    width: 100% !important;
+}
+
+.highcharts-container {
+    &>* {
+        font-family: $Rounded500;
+        color: #1f1f3b;
+    }
+}
+
+.highcharts-navigator-handle {
+    fill: $fuchsiaBlueColor;
+    stroke: $whiteColor;
+}
+
+.highcharts-label-box {
+    fill: $whiteColor;
+    stroke: $fuchsiaBlueColor;
+}
+
+.highcharts-scrollbar,
+.highcharts-credits {
+    display: none;
+}
+
+.highcharts-navigator-outline {
+    stroke: none;
+}
+
+.highcharts-input-group .highcharts-label-box {
+    stroke: rgba(38, 38, 66, 0.1);
+}
+
+.highcharts-button-box {
+    cursor: pointer;
+}
+
+.highcharts-range-input,
+.highcharts-range-selector {
+    outline: none;
+    border: none !important;
+}
+
+.highcharts-button text {
+    transform: translateY($desctop1px);
+}
+
+//highcharts
+
+.linenumber {
+    min-width: 3em !important;
+}
+
+// ant-radio
+
+span.ant-radio+* {
+    font-family: $Rounded500;
+    font-size: $desctop13px;
+    line-height: $desctop19px;
+    color: $blackColor;
+    padding: 0 $desctop8px;
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile13px;
+        line-height: $mobile19px;
+        padding: 0 $mobile7px;
+    }
+}
+
+.ant-radio-inner {
+    width: $desctop16px;
+    height: $desctop16px;
+    border-width: $desctop1px;
+
+    @media only screen and (max-width: 499px) {
+        width: $mobile16px;
+        height: $mobile16px;
+        border-width: $mobile1px;
+    }
+}
+
+.ant-radio-checked .ant-radio-inner {
+    border-color: $fuchsiaBlueColor;
+}
+
+.ant-radio-checked::after,
+.ant-radio-wrapper:hover .ant-radio,
+.ant-radio:hover .ant-radio-inner,
+.ant-radio-input:focus+.ant-radio-inner {
+    border-color: $fuchsiaBlueColor;
+}
+
+.ant-radio-checked::after {
+    border: $desctop1px solid $fuchsiaBlueColor;
+
+    @media only screen and (max-width: 499px) {
+        border: $mobile1px solid $fuchsiaBlueColor;
+    }
+}
+
+.ant-radio-inner::after {
+    background-color: $fuchsiaBlueColor;
+    top: $desctop3px;
+    left: $desctop3px;
+    width: $desctop8px;
+    height: $desctop8px;
+    border-radius: $desctop8px;
+
+    @media only screen and (max-width: 499px) {
+        top: 0.9vw;
+        left: 0.9vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 2.134vw;
+    }
+}
+
+.ant-radio-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: $desctop15px;
+
+    @media only screen and (max-width: 499px) {
+        margin-bottom: $mobile15px;
+    }
+}
+
+// ant-radio
+
+// burger-button
+.burgerMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $mobile34px;
+    height: $mobile24px;
+
+    button {
+        padding: $mobile5px;
+        margin: 0;
+
+        &>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $mobile34px;
+            height: $mobile24px;
+
+            &>span {
+                top: initial;
+                margin-top: 0;
+                width: $mobile34px;
+                height: $mobile4px;
+
+                &::before,
+                &::after {
+                    width: $mobile34px;
+                    height: $mobile4px;
+                    border-radius: $mobile4px;
+                }
+
+                &::before {
+                    top: -2.67vw;
+                }
+
+                &::after {
+                    bottom: -2.67vw;
+                }
+            }
+        }
+    }
+}
+
+// burger-button
+
+// modal QR code
+
+.modalQRCode {
+    canvas {
+        width: 19vw !important;
+        height: 18vw !important;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile270px !important;
+            height: $mobile270px !important;
+        }
+    }
+
+    &__address {
+        font-family: $Rounded400;
+        font-size: $desctop12px;
+        color: $fuchsiaBlueColor;
+        border-bottom: $desctop1px solid $fuchsiaBlueColor;
+        padding-bottom: $desctop6px;
+        margin-bottom: $desctop6px;
+        cursor: pointer;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile12px;
+            border-bottom: $mobile1px solid $fuchsiaBlueColor;
+            padding-bottom: $mobile6px;
+            margin-bottom: $mobile6px;
+        }
+    }
+}
+
+// modal QR code
+
+// pretty-print
+
+.json-key {
+    color: $blackColor;
+}
+
+.json-value {
+    color: $fuchsiaBlueColor;
+}
+
+.json-string {
+    color: $fuchsiaBlueColor;
+}
+
+// pretty-print
+
+#addressPage, #block-page {
+    .ant-tabs.ant-tabs-top.ant-tabs-line {
+        overflow: visible;
+    }
+}
+
+.noFromToData {
+    font-family: $Rounded500;
+    font-size: $desctop12px;
+    line-height: $desctop19px;
+    color: $fuchsiaBlueColor;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,147 @@
+// fonts
+$Rounded100: 'Rounded100', Arial, Helvetica, sans-serif;
+$Rounded300: 'Rounded300', Arial, Helvetica, sans-serif;
+$Rounded400: 'Rounded400', Arial, Helvetica, sans-serif;
+$Rounded500: 'Rounded500', Arial, Helvetica, sans-serif;
+$Rounded700: 'Rounded700', Arial, Helvetica, sans-serif;
+$Rounded800: 'Rounded800', Arial, Helvetica, sans-serif;
+$Rounded900: 'Rounded900', Arial, Helvetica, sans-serif;
+// fonts
+
+// colors
+$whiteColor:  #fff;
+$blackColor:  #000;
+$fuchsiaBlueColor: #784FCF;
+$shakespeareColor: #4FA8CF;
+$violetGradient: linear-gradient(180deg, #4FA8CF 0%, #784FCF 100%);
+// colors
+
+// desctop sizes
+$desctop1px: 0.072vw;
+$desctop2px: 0.14vw;
+$desctop3px: 0.209vw;
+$desctop4px: 0.28vw;
+$desctop5px: 0.35vw;
+$desctop6px: 0.42vw;
+$desctop8px: 0.56vw;
+$desctop9px: 0.625vw;
+$desctop10px: 0.7vw;
+$desctop11px: 0.764vw;
+$desctop12px: 0.84vw;
+$desctop13px: 0.91vw;
+$desctop14px: 1vw;
+$desctop15px: 1.1vw;
+$desctop16px: 1.12vw;
+$desctop17px: 1.181vw;
+$desctop18px: 1.25vw;
+$desctop19px: 1.32vw;
+$desctop20px: 1.4vw;
+$desctop21px: 1.46vw;
+$desctop22px: 1.53vw;
+$desctop23px: 1.598vw;
+$desctop24px: 1.65vw;
+$desctop25px: 1.8vw;
+$desctop26px: 1.806vw;
+$desctop27px: 1.876vw;
+$desctop28px: 1.945vw;
+$desctop30px: 2.084vw;
+$desctop32px: 2.23vw;
+$desctop34px: 2.362vw;
+$desctop35px: 2.431vw;
+$desctop36px: 2.5vw;
+$desctop40px: 2.778vw;
+$desctop45px: 3.13vw;
+$desctop50px: 3.48vw;
+$desctop55px: 3.82vw;
+$desctop58px: 3.63vw;
+$desctop60px: 4.17vw;
+$desctop63px: 4.376vw;
+$desctop66px: 4.59vw;
+$desctop68px: 4.73vw;
+$desctop70px: 4.862vw;
+$desctop75px: 5.209vw;
+$desctop80px: 5.556vw;
+$desctop90px: 6.25vw;
+$desctop100px: 6.945vw;
+$desctop104px: 7.25vw;
+$desctop110px: 7.64vw;
+$desctop115px: 7.987vw;
+$desctop120px: 8.334vw;
+$desctop125px: 8.681vw;
+$desctop124px: 8.62vw;
+$desctop140px: 9.723vw;
+$desctop148px: 9.25vw;
+$desctop150px: 10.42vw;
+$desctop132px: 9.17vw;
+$desctop135px: 9.376vw;
+$desctop160px: 13.8vw;
+$desctop178px: 12.37vw;
+$desctop200px: 13.9vw;
+$desctop225px: 15.63vw;
+$desctop259px: 18vw;
+$desctop290px: 20.139vw;
+$desctop295px: 20.487vw;
+
+// tablet sizes
+
+$tablet10px: 1.31vw;
+$tablet12px: 1.6vw;
+$tablet14px: 1.8vw;
+$tablet16px: 2.1vw;
+$tablet18px: 2.35vw;
+$tablet20px: 2.61vw;
+$tablet24px: 3.14vw;
+$tablet26px: 3.39vw;
+$tablet28px: 3.65vw;
+$tablet30px: 3.91vw;
+$tablet32px: 4.17vw;
+$tablet36px: 4.7vw;
+$tablet40px: 5.21vw;
+$tablet48px: 6.25vw;
+$tablet50px: 6.52vw;
+$tablet55px: 7vw;
+$tablet60px: 7.82vw;
+$tablet64px: 8.34vw;
+$tablet70px: 9.12vw;
+$tablet80px: 10.42vw;
+$tablet88px: 11.5vw;
+$tablet152px: 19.8vw;
+$tablet176px: 22.93vw;
+
+// mobile sizes
+
+$mobile1px: 0.28vw;
+$mobile2px: 0.556vw;
+$mobile4px: 1.05vw;
+$mobile5px: 1.39vw;
+$mobile6px: 1.67vw;
+$mobile7px: 1.945vw;
+$mobile10px: 2.67vw;
+$mobile12px: 3.2vw;
+$mobile13px: 3.612vw;
+$mobile14px: 3.89vw;
+$mobile15px: 4.17vw;
+$mobile16px: 4.445vw;
+$mobile17px: 4.723vw;
+$mobile18px: 5vw;
+$mobile19px: 5.28vw;
+$mobile20px: 5.556vw;
+$mobile21px: 5.834vw;
+$mobile24px: 6.67vw;
+$mobile25px: 6.945vw;
+$mobile26px: 7.223vw;
+$mobile28px: 7.9vw;
+$mobile30px: 8.334vw;
+$mobile32px: 8.5vw;
+$mobile34px: 8.7vw;
+$mobile42px: 11vw;
+$mobile44px: 11.74vw;
+$mobile50px: 13.89vw;
+$mobile55px: 14.7vw;
+$mobile60px: 16vw;
+$mobile65px: 17.4vw;
+$mobile68px: 18.15vw;
+$mobile70px: 19vw;
+$mobile75px: 20vw;
+$mobile150px: 40vw;
+$mobile270px: 72vw;

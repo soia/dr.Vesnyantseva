@@ -1,0 +1,18 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixin.scss';
+
+.button {
+    @include mainBtnStyle;
+    position: relative;
+
+    &__loading {
+        user-select: none;
+        pointer-events: none;
+    }
+
+    &__disabled {
+        user-select: none;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}

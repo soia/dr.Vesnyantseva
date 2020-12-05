@@ -1,0 +1,131 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixin';
+
+.transactions {
+    margin-bottom: $desctop30px;
+
+    @media only screen and (max-width: 499px) {
+        margin-bottom: $mobile30px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        background: $whiteColor;
+        box-shadow: 0 $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
+        border-radius: $desctop8px;
+        padding: $desctop10px $desctop20px;
+        margin: 0 $desctop5px $desctop15px;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+            box-shadow: 0 $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+            border-radius: $mobile7px;
+            padding: $mobile10px $mobile20px;
+            margin: 0 $mobile5px $mobile15px;
+        }
+    }
+
+    &__label {
+        font-family: $Rounded500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+        color: $fuchsiaBlueColor;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile13px;
+            line-height: $mobile19px;
+        }
+    }
+
+    &__link {
+        @include text500red;
+    }
+
+    &__text {
+        @include text500fuchsiaBlueColor;
+    }
+
+    &__column1,
+    &__column2,
+    &__column3,
+    &__column4,
+    &__column5,
+    &__column6,
+    &__column7 {
+        &>* {
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: initial;
+        }
+    }
+
+    &__column1 {
+        width: 14vw;
+
+        @media only screen and (max-width: 499px) {
+            width: 45%;
+            margin-bottom: $mobile15px;
+            order: 1;
+        }
+    }
+
+    &__column2 {
+        width: 6vw;
+
+        @media only screen and (max-width: 499px) {
+            width: 45%;
+            margin-bottom: $mobile15px;
+            order: 2;
+        }
+    }
+
+    &__column3 {
+        width: 10vw;
+
+        @media only screen and (max-width: 499px) {
+            width: 30%;
+            order: 5;
+        }
+    }
+
+    &__column4 {
+        width: 17vw;
+
+        @media only screen and (max-width: 499px) {
+            width: 45%;
+            margin-bottom: $mobile15px;
+            order: 3;
+        }
+    }
+
+    &__column5 {
+        width: 12vw;
+
+        @media only screen and (max-width: 499px) {
+            width: 45%;
+            margin-bottom: $mobile15px;
+            order: 4;
+        }
+    }
+
+    &__column6 {
+        width: 8vw;
+
+        @media only screen and (max-width: 499px) {
+            width: 30%;
+            order: 6;
+        }
+    }
+
+    &__column7 {
+        width: 8vw;
+
+        @media only screen and (max-width: 499px) {
+            width: 30%;
+            order: 7;
+        }
+    }
+}

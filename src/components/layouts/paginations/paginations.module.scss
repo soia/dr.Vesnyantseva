@@ -1,0 +1,27 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixin';
+
+.pagination {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @media only screen and (max-width: 499px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+.records {
+    position: absolute;
+    width: 7vw;
+    z-index: 0;
+
+    @media only screen and (max-width: 499px) {
+        position: relative;
+        z-index: 100;
+        margin-bottom: $mobile20px;
+        width: 28vw;
+    }
+}

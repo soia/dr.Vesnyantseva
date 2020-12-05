@@ -1,0 +1,301 @@
+@import "../../assets/styles/variables";
+
+@mixin mainBtnStyle {
+    cursor: pointer;
+    font-family: $Rounded500;
+    font-size: $desctop10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: $desctop1px;
+    outline: none;
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile10px;
+        line-height: 120%;
+    }
+}
+
+@mixin transparentButton {
+    border: $desctop2px solid $whiteColor;
+    box-sizing: border-box;
+    border-radius: $desctop25px;
+    transition: all 0.25s;
+    color: $fuchsiaBlueColor;
+    background: transparent;
+
+    @media only screen and (max-width: 499px) {
+        border: $mobile2px solid $whiteColor;
+        border-radius: $mobile20px;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.1vw;
+        height: 2.1vw;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile30px;
+            height: $mobile30px;
+        }
+
+        svg {
+            width: $desctop30px;
+            height: $desctop30px;
+            fill: $fuchsiaBlueColor;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile30px;
+                height: $mobile30px;
+            }
+        }
+    }
+
+    &:hover {
+        color: #fff;
+        background: $fuchsiaBlueColor;
+        border: $desctop2px solid $fuchsiaBlueColor;
+
+        @media only screen and (max-width: 499px) {
+            border: $mobile2px solid $fuchsiaBlueColor;
+        }
+
+        span {
+            svg {
+                fill: #fff;
+            }
+        }
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+@mixin grayTransparentButton {
+    border: $desctop2px solid $fuchsiaBlueColor;
+    box-sizing: border-box;
+    border-radius: $desctop25px;
+    transition: all 0.25s;
+    color: $fuchsiaBlueColor;
+    background: transparent;
+
+    @media only screen and (max-width: 499px) {
+        border: $mobile2px solid $fuchsiaBlueColor;
+        border-radius: $mobile20px;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.1vw;
+        height: 2.1vw;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile30px;
+            height: $mobile30px;
+        }
+
+        svg {
+            width: $desctop30px;
+            height: $desctop30px;
+            fill: $fuchsiaBlueColor;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile30px;
+                height: $mobile30px;
+            }
+        }
+    }
+
+    &:hover {
+        color: #fff;
+        background: $fuchsiaBlueColor;
+        border: $desctop2px solid $fuchsiaBlueColor;
+
+        @media only screen and (max-width: 499px) {
+            border: $mobile2px solid $fuchsiaBlueColor;
+        }
+
+        span {
+            svg {
+                fill: #fff;
+            }
+        }
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+@mixin filledButton {
+    border-radius: $desctop32px;
+    transition: all 0.25s;
+    color: #fff;
+    background: $fuchsiaBlueColor;
+    border: none;
+
+    @media only screen and (max-width: 499px) {
+        border: $mobile2px solid $fuchsiaBlueColor;
+        border-radius: $mobile20px;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.1vw;
+        height: 2.1vw;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile30px;
+            height: $mobile30px;
+        }
+
+        svg {
+            width: $desctop30px;
+            height: $desctop30px;
+            fill: $whiteColor;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile30px;
+                height: $mobile30px;
+            }
+        }
+    }
+
+    &:hover {
+        background: rgba(255, 48, 21, 0.5);
+    }
+}
+
+@mixin sublink {
+    position: absolute;
+    background: $whiteColor;
+    border: $desctop1px solid rgba(36, 36, 68, 0.1);
+    border-radius: $desctop17px;
+    padding: $desctop10px;
+    top: 2.5vw;
+    left: 50%;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(-50%, 0);
+
+    a {
+        font-family: $Rounded500;
+        font-size: $desctop10px;
+        line-height: $desctop10px;
+        letter-spacing: $desctop1px;
+        text-transform: uppercase;
+        color: $fuchsiaBlueColor;
+        display: flex;
+        white-space: nowrap;
+        justify-content: flex-start;
+        padding: $desctop10px;
+
+        &:hover {
+            color: $fuchsiaBlueColor;
+        }
+    }
+}
+
+
+@mixin moreLinks {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding: 0.9vw $desctop25px 0.9vw $desctop25px;
+    z-index: 101;
+    font-family: $Rounded500;
+    color: $whiteColor;
+    font-size: $desctop10px;
+    letter-spacing: $desctop1px;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $fuchsiaBlueColor;
+
+        .header__more_subLinks {
+            transition: transform 0.4s;
+            opacity: 1;
+            user-select: auto;
+            pointer-events: auto;
+            transform: translate(-50%, 0);
+        }
+
+        &>a {
+            color: $fuchsiaBlueColor;
+        }
+    }
+}
+
+@mixin moreLinksItem {
+    font-family: $Rounded700;
+    font-size: $desctop10px;
+    line-height: $desctop10px;
+    letter-spacing: $desctop1px;
+    text-transform: uppercase;
+    color: $blackColor;
+    text-align: left;
+    border-bottom: $desctop1px solid rgba(38, 38, 66, 0.1);
+    padding: $desctop5px $desctop10px $desctop9px $desctop10px;
+    cursor: default;
+}
+
+@mixin text500fuchsiaBlueColor {
+    font-family: $Rounded500;
+    font-size: $desctop13px;
+    line-height: $desctop19px;
+    color: $fuchsiaBlueColor;
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile13px;
+        line-height: $mobile19px;
+    }
+}
+
+@mixin text500red {
+    font-family: $Rounded500;
+    font-size: $desctop13px;
+    line-height: $desctop19px;
+    color: $fuchsiaBlueColor;
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile13px;
+        line-height: $mobile19px;
+    }
+
+    &:hover {
+        color: $fuchsiaBlueColor;
+        text-decoration: underline;
+    }
+}
+
+@mixin dropDownWrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding: $desctop12px $desctop20px;
+    width: 100%;
+    z-index: 10;
+    border: $desctop1px solid rgba(38, 38, 66, 0.1);
+    border-radius: $desctop8px;
+
+    @media only screen and (max-width: 499px) {
+        border-radius: $mobile10px;
+        height: $mobile44px;
+        border: $mobile1px solid rgba(38, 38, 66, 0.1);
+        padding: $mobile12px $mobile20px;
+    }
+}

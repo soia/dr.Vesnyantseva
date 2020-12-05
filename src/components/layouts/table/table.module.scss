@@ -1,0 +1,165 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixin.scss';
+
+.table {
+
+    &__header {
+        display: flex;
+        padding: 0 $desctop50px $desctop10px $desctop50px ;
+
+        @media only screen and (max-width: 499px) {
+            display: none;
+        }
+
+        &_th {
+            font-family: $Rounded500;
+            font-size: $desctop21px;
+            line-height: 150%;
+            color: $fuchsiaBlueColor;
+            width: 24%;
+            margin-right: 1%;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+
+        &_item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background: $fuchsiaBlueColor;
+            border-radius: $desctop20px;
+            margin-bottom: $desctop10px;
+            padding: $desctop27px $desctop50px;
+            min-height: $desctop80px;
+
+            @media only screen and (max-width: 499px) {
+                flex-wrap: wrap;
+                border-radius: $mobile20px;
+                margin-bottom: $mobile10px;
+                padding: $mobile15px;
+                min-height: 21.334vw;
+            }
+        }
+
+        &_td {
+            display: flex;
+            align-items: baseline;
+            font-family: $Rounded500;
+            font-size: $desctop17px;
+            line-height: initial;
+            color: $fuchsiaBlueColor;
+            width: 24%;
+            margin-right: 1%;
+
+            @media only screen and (max-width: 499px) {
+                line-height: 150%;
+                font-size: $mobile17px;
+                width: 49%;
+
+                &:first-child {
+                    order: 1;
+                    white-space: nowrap;
+                }
+
+                &:nth-child(2) {
+                    order: 3;
+                    font-family: $Rounded500;
+                    font-size: $mobile14px;
+                    color: $fuchsiaBlueColor;
+                }
+
+                &:nth-child(3) {
+                    order: 4;
+                    justify-content: flex-end;
+                    font-family: $Rounded500;
+                    font-size: $mobile14px;
+                    color: $fuchsiaBlueColor;
+                }
+
+                &:last-child {
+                    order: 2;
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        &_dotGreen,
+        &_dotRed,
+        &_dotYellow {
+            width: $desctop6px;
+            height: $desctop6px;
+            border-radius: 50%;
+            margin-left: $desctop10px;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile6px;
+                height: $mobile6px;
+                margin-left: $mobile10px;
+            }
+        }
+
+        &_dotGreen {
+            background: #29AD4E;
+        }
+
+        &_dotRed {
+            background: $fuchsiaBlueColor;
+        }
+
+        &_dotYellow {
+            background: #E6B842;
+        }
+
+        &_tdIcon {
+            width: $desctop12px;
+            height: $desctop12px;
+            margin-left: $desctop5px;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile12px;
+                height: $mobile12px;
+                margin-left: $mobile5px;
+            }
+        }
+    }
+}
+
+.noTransactionsYet {
+    font-family: $Rounded500;
+    font-size: $desctop21px;
+    line-height: 150%;
+    color: $fuchsiaBlueColor;
+    text-align: center;
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile17px;
+    }
+}
+
+.button {
+    @include transparentButton;
+    align-items: center;
+    margin-top: $desctop50px;
+
+    @media only screen and (max-width: 499px) {
+        width: 100%;
+        margin: $mobile42px 0 $mobile20px 0;
+        border-radius: $mobile25px;
+        height: $mobile60px;
+    }
+
+    svg {
+        margin-right: $desctop15px;
+        width: $desctop26px;
+        height: $desctop26px;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile26px;
+            height: $mobile26px;
+            margin-right: $mobile15px;
+        }
+    }
+}

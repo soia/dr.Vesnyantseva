@@ -1,0 +1,79 @@
+@import '../../assets/styles/variables';
+
+.container {
+    position: relative;
+
+    &__inputWrrapper {
+        display: flex;
+        align-items: center;
+
+        &_label {
+            font-family: $Rounded500;
+            font-size: $desctop18px;
+            color: $whiteColor;
+            position: absolute;
+            left: $desctop16px;
+            bottom: 0.9vw;
+            transition: color .3s ease,font-size .3s ease,bottom .3s ease,font-weight .3s ease;
+            -webkit-transform: translateZ(0);
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile18px;
+                left: $mobile14px;
+                bottom: 3.5vw;
+            }
+        }
+
+        &_labelActive {
+            bottom: 3.6vw;
+            font-family: $Rounded500;
+            font-size: $desctop9px;
+
+            @media only screen and (max-width: 499px) {
+                bottom: 13vw;
+                font-size: $mobile10px;
+            }
+        }
+
+        &_input {
+            width: 100%;
+            background: none;
+            border: $desctop1px solid rgba(255, 255, 255, 0.1);
+            border-radius: $desctop30px;
+            outline: none;
+            height: $desctop45px;
+            font-size: $desctop18px;
+            color: $whiteColor;
+            padding: 0 3.4vw 0 $desctop16px;
+            position: relative;
+
+            @media only screen and (max-width: 499px) {
+                border: $mobile1px solid rgba(255, 255, 255, 0.1);
+                border-radius: $mobile30px;
+                height: $mobile44px;
+                font-size: $mobile18px;
+                padding: 0 $mobile44px 0 $mobile14px;
+            }
+        }
+
+        &_inputError {
+            border: $desctop1px solid $fuchsiaBlueColor;
+        }
+    }
+
+    &__eye{
+        position: absolute;
+        right: $desctop16px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: $desctop21px;
+        height: $desctop24px;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile21px;
+            height: $mobile24px;
+            right: $mobile14px;
+        }
+    }
+}

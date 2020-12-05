@@ -1,0 +1,43 @@
+{
+    "extends": [
+        "airbnb",
+        "prettier"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+        "prettier"
+    ],
+    "globals": {
+        "localStorage": true,
+        "fetch": true,
+        "document": true
+    },
+    "rules": {
+        "prettier/prettier": [
+            "error"
+        ],
+        "import/prefer-default-export": "off",
+        "object-curly-newline": [
+            "error",
+            {
+                "ObjectExpression": "always",
+                "ObjectPattern": {
+                    "minProperties": 2
+                }
+            }
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "import/no-useless-path-segments": true
+    }
+}

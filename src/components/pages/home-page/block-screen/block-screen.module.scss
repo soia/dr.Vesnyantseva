@@ -1,0 +1,293 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixin';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: $desctop45px $desctop135px $desctop30px;
+    background-color: rgba(247, 248, 248, 0.45);
+
+    @media only screen and (max-width: 499px) {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    &__column {
+        width: 48.5%;
+
+        @media only screen and (max-width: 499px) {
+            width: 100%;
+            margin-bottom: $mobile10px;
+
+            &:last-child {
+                margin-bottom: $mobile30px;
+            }
+        }
+
+        &_title {
+            font-family: $Rounded900;
+            font-size: $desctop20px;
+            line-height: $desctop26px;
+            color: $fuchsiaBlueColor;
+            padding-left: $desctop20px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile20px;
+                line-height: $mobile26px;
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $desctop15px;
+
+        @media only screen and (max-width: 499px) {
+            background-color: $whiteColor;
+            margin-bottom: 0;
+            padding: $mobile20px 0 0 $mobile20px;
+        }
+    }
+
+    &__wrapper {
+        background: $whiteColor;
+        box-shadow: 0 $desctop4px $desctop6px rgba(0, 0, 0, 0.05);
+        border-radius: $desctop8px;
+        padding: $desctop20px;
+        min-height: 20.647vw;
+        display: flex;
+        flex-direction: column;
+
+        & > div {
+            min-height: initial;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 499px) {
+            padding: $mobile20px;
+            box-shadow: 0 $mobile5px $mobile6px rgba(0, 0, 0, 0.05);
+            border-radius: $mobile7px;
+            height: 80.6vw;
+        }
+    }
+
+    &__itemZerocoin {
+        display: flex;
+        justify-content: space-between;
+        padding: $desctop6px 0;
+        border-bottom: $desctop1px solid $fuchsiaBlueColor;
+
+        @media only screen and (max-width: 499px) {
+            padding: $mobile6px 0;
+            border-bottom: $mobile1px solid $fuchsiaBlueColor;
+        }
+
+        &_labelZerocoin,
+        &_contentZerocoin,
+        &_priceZerocoin {
+            font-family: $Rounded500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $fuchsiaBlueColor;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+
+        &_labelZerocoin {
+            width: $desctop100px;
+            color: $fuchsiaBlueColor;
+
+            @media only screen and (max-width: 499px) {
+                width: 33.33vw;
+            }
+        }
+
+        &_contentZerocoin {
+            @media only screen and (max-width: 499px) {
+                width: 33.33vw;
+                text-align: center;
+            }
+        }
+
+        &_priceZerocoin {
+            @media only screen and (max-width: 499px) {
+                width: 33.33vw;
+                text-align: right;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        padding: $desctop6px 0;
+        border-bottom: $desctop1px solid $fuchsiaBlueColor;
+
+        @media only screen and (max-width: 499px) {
+            padding: $mobile6px 0;
+            border-bottom: $mobile1px solid $fuchsiaBlueColor;
+        }
+
+        &_label,
+        &_content,
+        &_link {
+            font-family: $Rounded500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $fuchsiaBlueColor;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+
+        &_link {
+            color: $fuchsiaBlueColor;
+            width: 70%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 499px) {
+                width: 48%;
+            }
+
+            &:hover {
+                color: $fuchsiaBlueColor;
+                text-decoration: underline;
+            }
+        }
+
+        &_price {
+            text-align: right;
+        }
+
+        &_label {
+            width: 35%;
+            margin-right: 5%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $fuchsiaBlueColor;
+
+            @media only screen and (max-width: 499px) {
+                width: 48%;
+                margin-right: 4%;
+            }
+        }
+
+        &_content {
+            width: 70%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 499px) {
+                width: 48%;
+            }
+        }
+    }
+}
+
+.card {
+    background: $whiteColor;
+    box-shadow: 0px $desctop4px $desctop6px rgba(0, 0, 0, 0.05);
+    border-radius: $desctop8px;
+    padding: $desctop12px $desctop14px;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: $desctop15px;
+    }
+
+    &__logo {
+        width: $desctop40px;
+        height: $desctop40px;
+        margin-right: $desctop13px;
+    }
+
+    &__item {
+        margin-right: $desctop13px;
+
+        &_red,
+        &_gray {
+            font-family: $Rounded500;
+        }
+
+        &_red {
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $fuchsiaBlueColor;
+        }
+
+        &_gray {
+            font-size: $desctop10px;
+            line-height: $desctop16px;
+            color: $fuchsiaBlueColor;
+        }
+
+        &_tx {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 7vw;
+            display: block;
+
+            &:hover {
+                color: $fuchsiaBlueColor;
+                opacity: 0.5;
+            }
+        }
+
+        &_address {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 14.5vw;
+
+            &:hover {
+                color: $fuchsiaBlueColor;
+                opacity: 0.5;
+            }
+        }
+
+        &_row {
+            display: flex;
+            align-items: center;
+        }
+
+        &_label {
+            font-family: $Rounded500;
+            font-size: $desctop10px;
+            line-height: $desctop19px;
+            color: $fuchsiaBlueColor;
+            margin-right: $desctop6px;
+            min-width: $desctop27px;
+        }
+    }
+
+    &__reward {
+        font-family: $Rounded500;
+        font-size: $desctop10px;
+        line-height: $desctop17px;
+        letter-spacing: $desctop1px;
+        color: $fuchsiaBlueColor;
+        background: rgba(119, 131, 143, 0.1);
+        border-radius: $desctop4px;
+        padding: $desctop5px $desctop8px;
+    }
+}

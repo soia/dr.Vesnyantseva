@@ -1,0 +1,16 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixin';
+
+.firstScreen {
+    background: $violetGradient;
+    height: calc(100vh - 5.556vw);
+
+    @media only screen and (max-width: 499px) {
+        height: 60vw;
+    }
+
+    video {
+        width: 100vw;
+        height: 100%;
+    }
+}

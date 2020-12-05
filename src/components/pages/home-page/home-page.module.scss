@@ -1,0 +1,11 @@
+@import "../../assets/styles/variables";
+
+.homePage {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 160px);
+    align-items: center;
+    font-family: $CoreSansGRegular;
+    color: $greyLight;
+    font-size: 40px;
+}

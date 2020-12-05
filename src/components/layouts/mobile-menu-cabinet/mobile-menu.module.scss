@@ -1,0 +1,62 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixin';
+
+.burgerMenu {
+    display: none;
+
+    @media only screen and (max-width: 499px) {
+        display: block;
+    }
+
+    &__linksWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font-family: $Rounded500;
+        font-size: $mobile13px;
+        line-height: $mobile19px;
+        color: $fuchsiaBlueColor;
+        cursor: pointer;
+        padding: $mobile15px $mobile20px $mobile15px $mobile42px;
+
+        &:hover {
+            color: $fuchsiaBlueColor;
+        }
+
+        img {
+            width: $mobile20px;
+            height: $mobile20px;
+            margin-right: $mobile15px;
+        }
+    }
+}
+
+.drawer__opened,
+.drawer__closed {
+    display: none;
+
+    @media only screen and (max-width: 499px) {
+        display: block;
+        background: $whiteColor;
+        height: calc(100vh - 19vw);
+        width: 100vw;
+        position: absolute;
+        top: $mobile70px;
+        left: 0;
+        transition: transform 0.5s;
+        z-index: 100;
+        padding-top: $mobile34px;
+    }
+}
+
+.drawer__opened {
+    transform: translateX(0);
+}
+
+.drawer__closed {
+    transform: translateX(150vw);
+}

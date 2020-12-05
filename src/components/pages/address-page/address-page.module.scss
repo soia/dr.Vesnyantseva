@@ -1,0 +1,274 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixin';
+
+.address {
+    background: $whiteColor;
+    padding: $desctop45px 6vw $desctop30px $desctop135px;
+    flex: 1;
+
+    @media only screen and (max-width: 499px) {
+        padding: $mobile20px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: $desctop35px;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+            margin-bottom: $mobile18px;
+        }
+
+        &_address {
+            font-family: $Rounded500;
+            font-size: $desctop13px;
+            color: $fuchsiaBlueColor;
+            margin-right: $desctop15px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile24px;
+                margin-right: $mobile7px;
+                max-width: 74vw;
+                margin-right: auto;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $Rounded900;
+        font-size: $desctop24px;
+        line-height: $desctop24px;
+        color: $fuchsiaBlueColor;
+        margin-right: $desctop14px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile24px;
+            line-height: $mobile24px;
+            margin: 0 0 $mobile30px 0;
+            width: 100%;
+        }
+    }
+
+    &__copyIcon,
+    &__qrCodeIcon {
+        display: flex;
+        width: $desctop12px;
+        height: $desctop12px;
+        cursor: pointer;
+
+        svg, img {
+            width: $desctop12px;
+            height: $desctop12px;
+        }
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile15px;
+            height: $mobile15px;
+
+            svg, img {
+                width: $mobile15px;
+                height: $mobile15px;
+            }
+        }
+    }
+
+    &__qrCodeIcon {
+        margin-left: $desctop10px;
+
+        @media only screen and (max-width: 499px) {
+            margin-left: 5vw;
+        }
+    }
+}
+
+.topBlock {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $desctop35px;
+
+    @media only screen and (max-width: 499px) {
+        flex-direction: column;
+        margin-bottom: $mobile15px;
+    }
+
+    &__item {
+        background: $whiteColor;
+        box-shadow: 0 $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
+        border-radius: $desctop8px;
+        padding: $desctop20px;
+        width: 49%;
+
+        @media only screen and (max-width: 499px) {
+            box-shadow: 0 $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+            border-radius: $mobile7px;
+            padding: $mobile20px;
+            width: 100%;
+            margin-bottom: $mobile15px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $desctop24px;
+
+            @media only screen and (max-width: 499px) {
+                margin-bottom: $mobile15px;
+            }
+        }
+    }
+
+    &__label {
+        @include text500fuchsiaBlueColor;
+        min-width: 9vw;
+
+        @media only screen and (max-width: 499px) {
+            min-width: 40vw;
+            line-height: $mobile30px;
+        }
+    }
+
+    &__title {
+        @include text500fuchsiaBlueColor;
+        min-width: 12vw;
+        font-family: $Rounded900;
+
+        @media only screen and (max-width: 499px) {
+            min-width: 40vw;
+            line-height: $mobile30px;
+        }
+    }
+
+    &__blackText {
+        @include text500fuchsiaBlueColor;
+
+        @media only screen and (max-width: 499px) {
+            line-height: $mobile30px;
+        }
+    }
+
+    &__link {
+        @include text500red;
+
+        @media only screen and (max-width: 499px) {
+            line-height: $mobile30px;
+        }
+    }
+
+    &__addressCreator {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+
+        a {
+            max-width: 11.5vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 499px) {
+                max-width: 33vw;
+            }
+        }
+    }
+}
+
+.notFoundIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: $desctop30px 0;
+    min-height: 70vh;
+
+    @media only screen and (max-width: 499px) {
+        margin: $mobile30px 0;
+    }
+
+    img {
+        width: 17.5vw;
+        height: 16vw;
+        margin-bottom: $desctop20px;
+
+        @media only screen and (max-width: 499px) {
+            width: 60vw;
+            height: 52vw;
+            margin-bottom: $mobile20px;
+        }
+    }
+
+    &__title {
+        font-family: $Rounded900;
+        font-size: $desctop24px;
+        line-height: $desctop24px;
+        color: $blackColor;
+        margin-bottom: $desctop17px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile16px;
+            line-height: $mobile24px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+}
+
+.tagInfoWrapper {
+    display: flex;
+    align-items: center;
+
+    &__tag {
+        font-family: $Rounded500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+        color: $fuchsiaBlueColor;
+        margin-right: $desctop20px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile13px;
+            line-height: $mobile19px;
+            margin-right: $mobile10px;
+        }
+    }
+}
+
+.addNewTag {
+    display: flex;
+    align-items: center;
+    font-family: $Rounded500;
+    font-size: $desctop13px;
+    line-height: $desctop19px;
+    color: $fuchsiaBlueColor;
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile13px;
+        line-height: $mobile19px;
+    }
+
+    &:hover {
+        color: $fuchsiaBlueColor;
+        text-decoration: underline;
+    }
+
+    img {
+        width: $desctop14px;
+        height: $desctop14px;
+        margin-right: $desctop10px;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile14px;
+            height: $mobile14px;
+            margin-right: $mobile10px;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import '../../assets/styles/variables';
+
+.avatar {
+    position: relative;
+    display: flex;
+}
+
+.logo,
+.logoAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $fuchsiaBlueColor;
+    width: $desctop60px;
+    height: $desctop60px;
+    border-radius: 50%;
+
+    @media only screen and (max-width: 499px) {
+        width: $mobile30px;
+        height: $mobile30px;
+    }
+
+    span {
+        font-family: $Rounded500;
+        font-size: $desctop9px;
+        color: $whiteColor;
+        letter-spacing: 0.1vw;
+        margin-left: 0.1vw;
+        margin-bottom: 0.05vw;
+        line-height: normal;
+        display: block;
+        max-width: 2.5vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media only screen and (max-width: 499px) {
+            font-size: 2.5vw;
+            letter-spacing: 0.07vw;
+            max-width: 5vw;
+            font-size: $mobile12px;
+            margin-left: 0;
+        }
+    }
+}
+
+.logoAvatar {
+    background: transparent;
+    object-fit: cover;
+}

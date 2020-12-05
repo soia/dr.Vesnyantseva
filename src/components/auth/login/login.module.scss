@@ -1,0 +1,224 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixin';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background: $fuchsiaBlueColor;
+}
+
+.form {
+    width: 25.28vw;
+    margin: $desctop60px 0;
+
+    @media only screen and (max-width: 499px) {
+        width: 100%;
+        margin: $mobile42px $mobile25px;
+    }
+
+    &__title {
+        font-family: $Rounded500;
+        color: $whiteColor;
+        margin-bottom: $desctop18px;
+        font-size: $desctop24px;
+        line-height: $desctop34px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile24px;
+            line-height: $mobile34px;
+            margin-bottom: $mobile30px;
+        }
+    }
+
+    &__inputContainer {
+        margin-top: $desctop30px;
+        position: relative;
+
+        @media only screen and (max-width: 499px) {
+            margin-top: $mobile30px;
+        }
+
+        &_icon {
+            width: $desctop26px;
+            height: $desctop26px;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile26px;
+                height: $mobile26px;
+            }
+        }
+
+        &_iconError {
+            filter: drop-shadow(0px 4px 4px rgba(250, 72, 104, 0.45));
+            path {
+                fill: $fuchsiaBlueColor;
+            }
+        }
+    }
+
+    &__error {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        bottom: -1.4vw;
+
+        @media only screen and (max-width: 499px) {
+            bottom: -5.3vw;
+        }
+
+        &_icon {
+            width: $desctop16px;
+            height: $desctop16px;
+            margin-right: $desctop10px;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile16px;
+                height: $mobile16px;
+                margin-right: $mobile7px;
+            }
+
+            path {
+                fill:$fuchsiaBlueColor;
+            }
+        }
+
+        &_text {
+            font-family: $Rounded500;
+            font-size: $desctop13px;
+            color: $whiteColor;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+            }
+        }
+    }
+
+    &__button {
+        @include filledButton;
+        text-transform: uppercase;
+        width: 100%;
+        height: $desctop45px;
+        font-family: $Rounded900;
+        font-size: $desctop12px;
+        margin-top: $desctop30px;
+
+        @media only screen and (max-width: 499px) {
+            height: $mobile44px;
+            font-size: $mobile12px;
+            margin-top: $mobile30px;
+        }
+    }
+
+    &__signUp {
+        @include transparentButton;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        width: 100%;
+        height: $desctop45px;
+        font-family: $Rounded900;
+        font-size: $desctop12px;
+        margin-bottom: $desctop15px;
+        color: $whiteColor;
+
+        @media only screen and (max-width: 499px) {
+            height: $mobile44px;
+            font-size: $mobile12px;
+            margin-bottom: $mobile15px;
+        }
+    }
+
+    &__dontHaveAccount {
+        font-family: $Rounded500;
+        font-size: $desctop10px;
+        line-height: $desctop16px;
+        text-align: center;
+        color: $fuchsiaBlueColor;
+        margin: $desctop11px 0;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile10px;
+            line-height: $mobile16px;
+            margin: $mobile10px 0;
+        }
+    }
+}
+
+.forgotPassword {
+    display: flex;
+    cursor: pointer;
+    font-family: $Rounded500;
+    font-size: $desctop12px;
+    color: $fuchsiaBlueColor;
+    transition: 0.25s;
+    letter-spacing: $desctop1px;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 0 auto;
+
+    &:hover {
+        color: $whiteColor;
+    }
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile12px;
+        letter-spacing: $mobile1px;
+    }
+}
+
+.passwordErrors {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+    transition: max-height 0.4s, opacity 0.4s, visibility 0.4s, padding 0.1s ease;
+
+    &__hasError {
+        max-height: $desctop120px;
+        opacity: 1;
+        visibility: visible;
+        padding: 0.2vw 0 0 0;
+
+        @media only screen and (max-width: 499px) {
+            padding: $mobile7px 0 0 0;
+            max-height: 40vw;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-family: $Rounded500;
+        font-size: $desctop13px;
+        line-height: 150%;
+        color: $whiteColor;
+        margin: 0 $desctop15px 0 0;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile13px;
+            margin: 0 $mobile15px 0 0;
+        }
+    }
+
+    &__dot {
+        display: block;
+        border-radius: 50%;
+        width: $desctop6px;
+        height: $desctop6px;
+        background: $fuchsiaBlueColor;
+        margin-right: $desctop10px;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile6px;
+            height: $mobile6px;
+            margin-right: $mobile10px;
+        }
+    }
+}

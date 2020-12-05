@@ -1,0 +1,18 @@
+@import '../assets/styles/variables.scss';
+
+.spinnerWrapper {
+    flex: 1;
+    position: relative;
+    min-height: 38vw;
+
+    @media only screen and (max-width: 499px) {
+        min-height: 65vh;
+    }
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

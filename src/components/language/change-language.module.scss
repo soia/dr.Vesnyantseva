@@ -1,0 +1,28 @@
+@import '../assets/styles/variables';
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    @media only screen and (max-width: 499px) {
+        position: absolute;
+        left: $mobile20px;
+        bottom: $mobile42px;
+        flex-direction: row;
+    }
+
+    &__flagIcon {
+        width: $desctop22px;
+        height: $desctop22px;
+        border: $desctop1px solid rgba(241, 241, 241, 0.4);
+        border-radius: 50%;
+        box-sizing: content-box;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile21px;
+            height: $mobile21px;
+        }
+    }
+}
