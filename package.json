@@ -19,6 +19,7 @@
         "qrcode.react": "^1.0.0",
         "rc-pagination": "^3.1.2",
         "react": "^16.8.6",
+        "react-anchor-link-smooth-scroll": "^1.0.12",
         "react-avatar": "^3.9.7",
         "react-css-burger": "^0.2.0",
         "react-dom": "^16.8.6",

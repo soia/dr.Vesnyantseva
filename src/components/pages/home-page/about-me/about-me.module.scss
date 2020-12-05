@@ -1,16 +1,52 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/mixin';
 
-.firstScreen {
-    background: $violetGradient;
-    height: calc(100vh - 5.556vw);
+.aboutMe {
+    padding: $desctop100px $desctop20px $desctop124px;
+}
 
-    @media only screen and (max-width: 499px) {
-        height: 60vw;
+.letter {
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+    width: 53vw;
+    padding: $desctop80px;
+    background-image: url('../../../assets/images/icons/old-letter.jpg');
+    background-position: 0 0;
+    box-shadow: 0 $desctop5px $desctop8px 0 rgba(0,0,0,.07);
+    font-size: $desctop18px;
+    line-height: $desctop24px;
+
+    &__portret {
+        position: absolute;
+        right: $desctop70px;
+        top: -3vw;
+        width: $desctop150px;
+        height: $desctop150px;
     }
 
-    video {
-        width: 100vw;
-        height: 100%;
+    &__title {
+        font-family: $Rounded500;
+        font-size: $desctop27px;
+        color: $blackColor;
+        margin-bottom: $desctop15px;
+    }
+
+    &__text {
+        font-family: $Rounded400;
+        font-size: $desctop20px;
+        line-height: $desctop36px;
+        color: $blackColor;
+    }
+
+    &__sine {
+        margin-top: 3vw;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+
+        img {
+            width: 20vw;
+        }
     }
 }

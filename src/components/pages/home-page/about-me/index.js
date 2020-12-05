@@ -1,3 +1,3 @@
-import FirstScreen from './first-screen';
+import AboutMe from './about-me';
 
-export default FirstScreen;
+export default AboutMe;

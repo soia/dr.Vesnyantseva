@@ -1,10 +1,9 @@
-import React, { Fragment, Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withTranslation } from 'react-i18next';
-import ArrowRight from '../../assets/images/icons/arrow-right';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { mobileSublinksActions } from '../../../actions/mobile-sublinks.actions';
 import mobileWidth from '../../../helpers/mobile-width';
 import { compose } from '../../../utils';
@@ -15,8 +14,6 @@ class ListOfLinks extends Component {
         setSubLinks: () => {},
         classNameList: '',
         classNameItem: '',
-        classNameSubLinks: '',
-        mobileSublinks: '',
     };
 
     static propTypes = {
@@ -24,8 +21,6 @@ class ListOfLinks extends Component {
         setSubLinks: PropTypes.func,
         classNameList: PropTypes.string,
         classNameItem: PropTypes.string,
-        classNameSubLinks: PropTypes.string,
-        mobileSublinks: PropTypes.string,
     };
 
     selectCategory = id => {
@@ -36,19 +31,13 @@ class ListOfLinks extends Component {
     };
 
     render() {
-        const {
-            t,
-            classNameList,
-            classNameItem,
-            classNameSubLinks,
-            mobileSublinks,
-        } = this.props;
+        const { t, classNameList, classNameItem } = this.props;
 
         const links = [
             {
                 id: '1',
                 name: t('aboutMe'),
-                path: '/',
+                path: '#aboutMe',
             },
             {
                 id: '2',
@@ -61,53 +50,14 @@ class ListOfLinks extends Component {
             },
         ];
 
-        const activeSublinks = links.find(item => item.id === mobileSublinks);
-
-        if (activeSublinks) {
-            return (
-                <ul className={classNameSubLinks}>
-                    {activeSublinks.subLinks.map(list => {
-                        const { title, subPath } = list;
-
-                        return (
-                            <li key={title}>
-                                <Link to={subPath}>{title}</Link>
-                            </li>
-                        );
-                    })}
-                </ul>
-            );
-        }
-
         return (
             <ul className={classNameList}>
                 {links.map(item => {
-                    const {
-                        name, path, id, subLinks,
-                    } = item;
+                    const { name, path, id } = item;
 
                     return (
                         <li key={id} className={classNameItem}>
-                            {!subLinks ? (
-                                <Link to={path}>{name}</Link>
-                            ) : (
-                                <div onClick={() => this.selectCategory(id)}>
-                                    {name} <ArrowRight />
-                                </div>
-                            )}
-                            {!mobileWidth() && subLinks ? (
-                                <div className={classNameSubLinks}>
-                                    {subLinks.map(list => {
-                                        const { title, subPath } = list;
-
-                                        return (
-                                            <Fragment key={title}>
-                                                <Link to={subPath}>{title}</Link>
-                                            </Fragment>
-                                        );
-                                    })}
-                                </div>
-                            ) : null}
+                            <AnchorLink href={path}>{name}</AnchorLink>
                         </li>
                     );
                 })}
