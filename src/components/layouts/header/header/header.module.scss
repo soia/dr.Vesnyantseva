@@ -8,6 +8,8 @@
     background-color: $blackColor;
     height: $desctop80px;
     padding: 0 $desctop30px;
+    position: relative;
+    z-index: 99999;
 
     @media only screen and (max-width: 499px) {
         height: $mobile70px;
@@ -71,7 +73,7 @@
         &_item>* {
             font-family: $Rounded500;
             color: $whiteColor;
-            font-size: $desctop10px;
+            font-size: $desctop11px;
             letter-spacing: $desctop1px;
             text-transform: uppercase;
 

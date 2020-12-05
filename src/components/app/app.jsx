@@ -2,43 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ReactNotification from 'react-notifications-component';
 import ScrollToTop from '../../helpers/scroll-to-top';
-import { PageNotFound, PersonalArea, VerificationUser } from '../pages';
+import { PageNotFound } from '../pages';
 import HomePage from '../pages/home-page/home-page';
-import SearchPage from '../pages/search-page';
-import DirectoryPage from '../pages/directory-page';
-import BlockPage from '../pages/block-page';
-import TransactionPage from '../pages/transaction-page';
-import ContractPage from '../pages/contract-page';
-import Footer from '../layouts/footer';
-import Login from '../auth/login';
-import Registration from '../auth/registration';
 import Header from '../layouts/header';
-import LeasingPools from '../pages/leasing-pools';
-import AddressPage from '../pages/address-page';
-import PasswordRestore from '../auth/password-restore';
-import ResetPassword from '../auth/reset-password';
 import LoadingScreen from '../loading-screen';
-import AllTransactions from '../pages/all-transactions-page';
-import AllBlocks from '../pages/all-blocks-page';
-import TopAccounts from '../pages/top-accounts-page';
-import {
-    loginPath,
-    registartionPath,
-    passowrdRecoveryPath,
-    resetPasswordPath,
-    searchPath,
-    BTCUDirectoryPath,
-    blockPath,
-    transactionPath,
-    contractPath,
-    personalAreaPath,
-    verificationUserPath,
-    leasingPoolsPath,
-    addressPath,
-    allTransactionsPath,
-    allBlocksPath,
-    topAccountsPath,
-} from '../../constants';
 import '../assets/styles/reset.scss';
 import './app.scss';
 import './pagination.scss';
@@ -113,26 +80,6 @@ class App extends Component {
                     <LoadingScreen loading={loading} />
                     <Switch>
                         <Route path="/" component={HomePage} exact />
-                        <Route path={loginPath} component={Login} exact />
-                        <Route path={registartionPath} component={Registration} exact />
-                        <Route
-                            path={verificationUserPath}
-                            component={VerificationUser}
-                            exact
-                        />
-                        <Route path={passowrdRecoveryPath} component={PasswordRestore} exact />
-                        <Route path={resetPasswordPath} component={ResetPassword} exact />
-                        <Route path={searchPath} component={SearchPage} exact />
-                        <Route path={BTCUDirectoryPath} component={DirectoryPage} exact />
-                        <Route path={`${addressPath}/:id?`} component={AddressPage} exact />
-                        <Route path={`${blockPath}/:id?`} component={BlockPage} exact />
-                        <Route path={`${transactionPath}/:id?`} component={TransactionPage} exact />
-                        <Route path={`${contractPath}/:id?`} component={ContractPage} exact />
-                        <Route path={leasingPoolsPath} component={LeasingPools} exact />
-                        <Route path={allTransactionsPath} component={AllTransactions} exact />
-                        <Route path={topAccountsPath} component={TopAccounts} exact />
-                        <Route path={allBlocksPath} component={AllBlocks} exact />
-                        <Route path={personalAreaPath} component={PersonalArea} />
                         <Route component={PageNotFound} />
                     </Switch>
                 </ScrollToTop>

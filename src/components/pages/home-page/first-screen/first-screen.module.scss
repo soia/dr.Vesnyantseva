@@ -4,13 +4,62 @@
 .firstScreen {
     background: $violetGradient;
     height: calc(100vh - 5.556vw);
+    position: relative;
 
     @media only screen and (max-width: 499px) {
         height: 60vw;
     }
 
     video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         width: 100vw;
-        height: 100%;
+        height: calc(100vh - 5.556vw);
+        z-index: 1;
+    }
+
+    &__arrowDown {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: $desctop90px;
+        cursor: pointer;
+        z-index: 10;
+    }
+}
+
+.tilt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 5.556vw);
+    position: relative;
+    z-index: 2;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: hsla(0,0%,100%,.8);
+        width: 35vw;
+        height: $desctop200px;
+
+        &_title {
+            font-family: $Rounded700;
+            font-size: $desctop36px;
+            color: $blackColor;
+            margin-bottom: $desctop15px;
+        }
+
+        &_subTitle {
+            font-family: $Rounded500;
+            font-size: $desctop24px;
+            color: $blackColor;
+        }
     }
 }
