@@ -4,12 +4,12 @@ import signature from '../../../assets/images/portrets/signature.png';
 import style from './education.module.scss';
 
 const Education = () => (
-    <div className={style.education} id="aboutMe">
+    <div className={style.aboutMe} id="aboutMe">
         <div className={style.letter}>
             <img className={style.letter__portret} src={portret} alt="portret" />
             <h3 className={style.letter__title}>Hello!</h3>
             <p className={style.letter__text}>
-                I'm a dentist who fears going to the dentist.
+                Im a dentist who fears going to the dentist.
             </p>
             <p className={style.letter__text}>
                 My fear gave birth to a dream. What if I could create a dental practice
