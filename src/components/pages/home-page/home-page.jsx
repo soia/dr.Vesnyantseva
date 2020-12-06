@@ -3,7 +3,7 @@ import FirstScreen from './first-screen';
 import AboutMe from './about-me';
 import ImagesOnScroll from './images-on-scroll';
 import Education from './education';
-import ImagesSlider from './images-slider';
+import CardSlider from './cards-slider/cards-slider';
 
 const HomePage = () => (
     <Fragment>
@@ -11,7 +11,7 @@ const HomePage = () => (
         <AboutMe />
         <ImagesOnScroll />
         <Education />
-        <ImagesSlider />
+        <CardSlider />
     </Fragment>
 );
 
