@@ -697,3 +697,80 @@ span.ant-radio+* {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+
+// Animation
+
+.animWrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .anim1,
+  .anim2,
+  .anim3 {
+    position: absolute;
+    will-change: transform;
+    border-radius: 50%;
+    background: $violetGradient;
+    box-shadow: $desctop10px $desctop10px $desctop5px 0 rgba(0, 0, 0, 0.75);
+    opacity: 0.6;
+  }
+
+  .anim1 {
+    width: $desctop160px;
+    height: $desctop160px;
+  }
+
+  .anim2 {
+    width: 24.4vw;
+    height: 24.4vw;
+  }
+
+  .anim3 {
+    width: $desctop200px;
+    height: $desctop200px;
+  }
+
+  .anim1::after,
+  .anim2::after,
+  .anim3::after {
+    content: '';
+    position: absolute;
+    top: $desctop50px;
+    left: $desctop50px;
+    width: $desctop50px;
+    height: $desctop50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .anim2::after {
+    top: $desctop70px;
+    left: $desctop70px;
+    width: $desctop70px;
+    height: $desctop70px;
+  }
+
+  .anim3::after {
+    top: $desctop50px;
+    left: $desctop50px;
+    width: $desctop50px;
+    height: $desctop50px;
+  }
+
+  .anim-filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    filter: url('#goo');
+    overflow: hidden;
+  }
+
+
+  // Animation

@@ -5,6 +5,8 @@
     background: $violetGradient;
     height: calc(100vh - 5.556vw);
     position: relative;
+    overflow: hidden;
+    z-index: 1;
 
     @media only screen and (max-width: 499px) {
         height: 60vw;
@@ -12,12 +14,11 @@
 
     video {
         position: absolute;
-        top: 0;
+        top: -3vw;
         left: 0;
         right: 0;
         bottom: 0;
         width: 100vw;
-        height: calc(100vh - 5.556vw);
         z-index: 1;
     }
 
