@@ -5,7 +5,7 @@ import Sequence from './Sequence';
 const ImagesOnScroll = () => {
     const ref = useRef();
     return (
-        <div className="App">
+        <div>
             <Controller>
                 <Scene duration="200%" triggerHook="onLeave" pin>
                     {progress => (

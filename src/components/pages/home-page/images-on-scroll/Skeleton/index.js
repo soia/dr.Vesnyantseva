@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '../images-on-scroll.module.scss';
 
 const Skeleton = ({
     count, width, wrapper: Wrapper, height, circle, margin,
@@ -24,7 +25,7 @@ const Skeleton = ({
         }
 
         elements.push(
-            <span key={i} className="skeleton" style={style}>
+            <span key={i} className={styles.skeleton} style={style}>
                 &zwnj;
             </span>,
         );

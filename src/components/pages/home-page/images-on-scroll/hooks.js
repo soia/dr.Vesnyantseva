@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-expressions */
+/* eslint-disable */
 import { useState, useEffect } from 'react';
 
 const defaultState = { image: undefined, status: 'loading' };
@@ -13,11 +13,11 @@ const useImage = (url, crossOrigin) => {
         if (!url) return;
         const img = document.createElement('img');
 
-        function onload() {
+        const onload = () => {
             setState({ image: img, status: 'loaded' });
         }
 
-        function onerror() {
+        const onerror = () => {
             setState({ image: undefined, status: 'failed' });
         }
 
