@@ -43,7 +43,7 @@ class ListOfLinks extends Component {
             {
                 id: '2',
                 name: t('education'),
-                path: '/',
+                path: '#education',
                 icon: null,
             },
             {

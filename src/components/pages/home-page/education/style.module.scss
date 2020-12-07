@@ -1,7 +1,7 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/mixin';
 
-#cardSlider {
+.container {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -13,14 +13,14 @@
     &>span {
         position: absolute;
         width: 100vw;
-        height: 100vh;
+        height: 115vh;
         will-change: transform;
         display: flex;
         align-items: center;
         justify-content: center;
 
         &>span {
-            background-color: $whiteColor;
+            background-color: transparent;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
@@ -29,5 +29,28 @@
             will-change: transform;
             border-radius: $desctop10px;
         }
+    }
+}
+
+.wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $desctop60px;
+
+    &__title {
+        font-family: $Rounded700;
+        color: $whiteColor;
+        font-size: $desctop36px;
+        margin-bottom: $desctop15px;
+    }
+
+    &__subTitle {
+        font-family: $Rounded500;
+        color: $whiteColor;
+        font-size: $desctop24px;
     }
 }
