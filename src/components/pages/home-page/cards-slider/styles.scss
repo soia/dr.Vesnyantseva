@@ -21,13 +21,11 @@
 
         &>span {
             background-color: $whiteColor;
-            background-size: auto 85%;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
-            width: 45vh;
-            max-width: 21vw;
-            height: 85vh;
-            max-height: 40vw;
+            width: 70vh;
+            height: 70vh;
             will-change: transform;
             border-radius: $desctop10px;
         }

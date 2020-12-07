@@ -6,12 +6,12 @@ import './styles.scss';
 import './style.css';
 
 const cards = [
-    'https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg',
-    'https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg',
-    'https://upload.wikimedia.org/wikipedia/en/9/9b/RWS_Tarot_07_Chariot.jpg',
-    'https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_06_Lovers.jpg',
-    'https://upload.wikimedia.org/wikipedia/en/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg',
-    'https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg',
+    'https://fainaidea.com/wp-content/uploads/2019/02/diplom.jpg',
+    'https://diplomukr.kiev.ua/wp-content/uploads/2020/02/attestat-scaled.jpg',
+    'https://dabi.gov.ua/wp-content/uploads/2018/11/dyp-2.jpg',
+    'https://martex.pro/wp-content/uploads/2018/12/nagradnye-diplomy-na-metalle.-diplom-na-derevjannoj-podlozhke-pegas-touristik-1.jpg',
+    'https://vesti.ua/wp-content/uploads/2015/07/106385.jpg',
+    'https://fainaidea.com/wp-content/uploads/2019/02/diplom.jpg',
 ];
 
 const to = i => ({
