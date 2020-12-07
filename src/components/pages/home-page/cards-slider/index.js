@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useSprings, animated, interpolate } from 'react-spring';
 import { useGesture } from 'react-use-gesture';
 import './styles.scss';
+import './style.css';
 
 const cards = [
     'https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg',
@@ -62,8 +63,16 @@ const cardSlider = () => {
 
     return (
         <div id="cardSlider">
+                <link
+                    href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+                    rel="stylesheet"
+                    type="text/css"
+                />
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
             {props.map(({ x, y, rot, scale }, i) => (
-                <animated.div
+                <animated.span
                     key={i}
                     style={{
                         transform: interpolate(
@@ -72,14 +81,14 @@ const cardSlider = () => {
                         ),
                     }}
                 >
-                    <animated.div
+                    <animated.span
                         {...bind(i)}
                         style={{
                             transform: interpolate([rot, scale], trans),
                             backgroundImage: `url(${cards[i]})`,
                         }}
                     />
-                </animated.div>
+                </animated.span>
             ))}
         </div>
     );
