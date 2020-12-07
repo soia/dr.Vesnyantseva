@@ -73,7 +73,7 @@ const StickySlider = () => (
             </div>
             <div className="box">
                 <img
-                    src="https://lh3.googleusercontent.com/proxy/gnp4ibSwaqaz6LLXQZP6hqj4h9sHD3Z9gHH7NkmQ08fzeiTQhGdUP3jyfE9YOdUjNx9Jj1eA0429r8_nL86Gy9Pe24DD23ZNI40tZsWq"
+                    src="https://fenixsmile.com.ua/wp-content/uploads/parodontologiya.jpg"
                     alt="slide"
                     className="img"
                 />

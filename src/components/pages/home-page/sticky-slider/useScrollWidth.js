@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useLayoutEffect, useCallback, useState } from 'react';
 
 function getScrollWidth(element) {

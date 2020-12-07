@@ -1,5 +1,7 @@
-import React, { Fragment, useEffect } from 'react';
-import { useSpring, animated as anim } from 'react-spring';
+/* eslint-disable react/no-array-index-key */
+import React, { Fragment } from 'react';
+import { useTrail, animated } from 'react-spring';
+import PropTypes from 'prop-types';
 import portret from '../../../assets/images/portrets/portret.png';
 import signature from '../../../assets/images/portrets/signature.png';
 import style from './about-me.module.scss';
@@ -8,16 +10,12 @@ const fast = { tension: 1200, friction: 40 };
 const slow = { mass: 10, tension: 200, friction: 50 };
 const trans = (x, y) => `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
 
-export default function AboutMe() {
-    const [{ pos1 }, set] = useSpring({ pos1: [0, 0], config: fast });
-    const [{ pos2 }] = useSpring({ pos2: pos1, config: slow });
-    const [{ pos3 }] = useSpring({ pos3: pos2, config: slow });
-    useEffect(() => {
-        const handler = ({ clientX, clientY }) => set({ pos1: [clientX, clientY] });
-        window.addEventListener('mousemove', handler);
-        return () => window.removeEventListener('mousemove', handler);
-        // eslint-disable-next-line
-    }, []);
+const AboutMe = () => {
+    const [trail, set] = useTrail(3, () => ({
+        xy: [0, 0],
+        config: i => (i === 0 ? fast : slow),
+    }));
+
     return (
         <Fragment>
             <div className={style.aboutMe} id="aboutMe">
@@ -34,21 +32,16 @@ export default function AboutMe() {
                         />
                     </filter>
                 </svg>
-                <div className="animWrapper">
-                    <div className="anim-filter">
-                        <anim.div
-                            className="anim1"
-                            style={{ transform: pos3.interpolate(trans) }}
+                <div
+                    className="hooks-main"
+                    onMouseMove={e => set({ xy: [e.clientX, e.clientY] })}
+                >
+                    {trail.map((props, index) => (
+                        <animated.div
+                            key={index}
+                            style={{ transform: props.xy.interpolate(trans) }}
                         />
-                        <anim.div
-                            className="anim2"
-                            style={{ transform: pos2.interpolate(trans) }}
-                        />
-                        <anim.div
-                            className="anim3"
-                            style={{ transform: pos1.interpolate(trans) }}
-                        />
-                    </div>
+                    ))}
                 </div>
                 <div className={style.letter}>
                     <img className={style.letter__portret} src={portret} alt="portret" />
@@ -78,4 +71,14 @@ export default function AboutMe() {
             </div>
         </Fragment>
     );
-}
+};
+
+AboutMe.defaultProps = {
+    xy: {},
+};
+
+AboutMe.propTypes = {
+    xy: PropTypes.object,
+};
+
+export default AboutMe;

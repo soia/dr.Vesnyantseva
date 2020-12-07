@@ -681,7 +681,8 @@ span.ant-radio+* {
 
 // pretty-print
 
-#addressPage, #block-page {
+#addressPage,
+#block-page {
     .ant-tabs.ant-tabs-top.ant-tabs-line {
         overflow: visible;
     }
@@ -700,76 +701,68 @@ span.ant-radio+* {
 
 // Animation
 
-.animWrapper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.hooks-main>svg {
+    display: none;
+}
 
-  .anim1,
-  .anim2,
-  .anim3 {
+.hooks-main>div {
     position: absolute;
     will-change: transform;
     border-radius: 50%;
     background: $violetGradient;
     box-shadow: $desctop10px $desctop10px $desctop5px 0 rgba(0, 0, 0, 0.75);
-    opacity: 0.6;
-  }
+}
 
-  .anim1 {
-    width: $desctop160px;
-    height: $desctop160px;
-  }
+.hooks-main>div:nth-child(1) {
+    width: $desctop120px;
+    height: $desctop120px;
+}
 
-  .anim2 {
-    width: 24.4vw;
-    height: 24.4vw;
-  }
+.hooks-main>div:nth-child(2) {
+    width: $desctop225px;
+    height: $desctop225px;
+}
 
-  .anim3 {
-    width: $desctop200px;
-    height: $desctop200px;
-  }
+.hooks-main>div:nth-child(3) {
+    width: $desctop150px;
+    height: $desctop150px;
+}
 
-  .anim1::after,
-  .anim2::after,
-  .anim3::after {
+.hooks-main>div::after {
     content: '';
     position: absolute;
-    top: $desctop50px;
-    left: $desctop50px;
-    width: $desctop50px;
-    height: $desctop50px;
+    top: $desctop20px;
+    left: $desctop20px;
+    width: $desctop40px;
+    height: $desctop40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.8);
-  }
+}
 
-  .anim2::after {
+.hooks-main>div:nth-child(2)::after {
     top: $desctop70px;
     left: $desctop70px;
     width: $desctop70px;
     height: $desctop70px;
-  }
+}
 
-  .anim3::after {
+.hooks-main>div:nth-child(3)::after {
     top: $desctop50px;
     left: $desctop50px;
     width: $desctop50px;
     height: $desctop50px;
-  }
+}
 
-  .anim-filter {
+.hooks-main {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    bottom: 0;
     filter: url('#goo');
     overflow: hidden;
-  }
+}
 
-
-  // Animation
+// Animation
