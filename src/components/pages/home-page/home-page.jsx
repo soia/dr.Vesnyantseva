@@ -3,7 +3,8 @@ import FirstScreen from './first-screen';
 import AboutMe from './about-me';
 import ImagesOnScroll from './images-on-scroll';
 import Education from './education';
-import CardSlider from './cards-slider/cards-slider';
+import CardSlider from './cards-slider';
+import StickySlider from './sticky-slider';
 
 const HomePage = () => (
     <Fragment>
@@ -12,6 +13,8 @@ const HomePage = () => (
         <ImagesOnScroll />
         <Education />
         <CardSlider />
+        <StickySlider />
+        <Education />
     </Fragment>
 );
 

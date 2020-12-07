@@ -1,0 +1,43 @@
+@import '../../../assets/styles//variables.scss';
+@import '../../../assets/styles/mixin';
+
+.padding-block {
+    display: flex;
+    text-align: center;
+    font-size: 5vmax;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.scroll-carousel {
+    background: $shakespeareColor;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.transform-box {
+    display: flex;
+    will-change: transform;
+    height: 100vh;
+    align-items: center;
+}
+
+.box {
+    flex-shrink: 0;
+    width: 50vw;
+    height: 50vw;
+    margin: 0 2rem;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
