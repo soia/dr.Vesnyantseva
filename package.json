@@ -23,6 +23,7 @@
         "react": "^16.8.6",
         "react-anchor-link-smooth-scroll": "^1.0.12",
         "react-avatar": "^3.9.7",
+        "react-coverflow": "^0.2.20",
         "react-css-burger": "^0.2.0",
         "react-dom": "^16.8.6",
         "react-dropzone": "^11.2.3",
