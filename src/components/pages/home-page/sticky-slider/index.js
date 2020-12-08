@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useSpring, animated as a, interpolate } from 'react-spring';
+import { useTranslation } from 'react-i18next';
 import useWindowScroll from '@react-hook/window-scroll';
 import Particles from 'react-particles-js';
 import useScrollWidth from './useScrollWidth';
@@ -9,8 +10,10 @@ import slide2 from './images/slide-2.JPG';
 import slide3 from './images/slide-3.JPG';
 import slide4 from './images/slide-4.JPG';
 import './styles.scss';
+import { t } from 'i18n-js';
 
-function ScrollCarousel({ children }) {
+const ScrollCarousel = ({ children }) => {
+    const { t } = useTranslation();
     const refHeight = useRef(null);
     const refTransform = useRef(null);
 
@@ -174,6 +177,7 @@ function ScrollCarousel({ children }) {
                 />
             ) : null}
             <div className="sticky-box">
+                <h3 className="scroll-carousel-title">{t('specialization')}</h3>
                 <a.div
                     style={{ transform: interpTransform }}
                     className="transform-box"
@@ -184,38 +188,22 @@ function ScrollCarousel({ children }) {
             </div>
         </div>
     );
-}
+};
 
 const StickySlider = () => (
     <div className="container">
         <ScrollCarousel>
             <div className="box">
-                <img
-                    src={slide1}
-                    alt="slide"
-                    className="img"
-                />
+                <img src={slide1} alt="slide" className="img" />
             </div>
             <div className="box">
-                <img
-                    src={slide2}
-                    alt="slide"
-                    className="img"
-                />
+                <img src={slide2} alt="slide" className="img" />
             </div>
             <div className="box">
-                <img
-                    src={slide3}
-                    alt="slide"
-                    className="img"
-                />
+                <img src={slide3} alt="slide" className="img" />
             </div>
             <div className="box">
-                <img
-                    src={slide4}
-                    alt="slide"
-                    className="img"
-                />
+                <img src={slide4} alt="slide" className="img" />
             </div>
         </ScrollCarousel>
     </div>
