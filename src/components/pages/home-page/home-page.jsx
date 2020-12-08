@@ -13,10 +13,10 @@ const HomePage = () => (
         <FirstScreen />
         <AboutMe />
         <Education />
+        <StickySlider />
         <Blog />
         <Gallery />
         <Boxes />
-        <StickySlider />
         <ImagesOnScroll />
     </Fragment>
 );

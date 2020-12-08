@@ -1,8 +1,13 @@
 /* eslint-disable */
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useSpring, animated as a, interpolate } from 'react-spring';
 import useWindowScroll from '@react-hook/window-scroll';
+import Particles from 'react-particles-js';
 import useScrollWidth from './useScrollWidth';
+import slide1 from './images/slide-1.JPG';
+import slide2 from './images/slide-2.JPG';
+import slide3 from './images/slide-3.JPG';
+import slide4 from './images/slide-4.JPG';
 import './styles.scss';
 
 function ScrollCarousel({ children }) {
@@ -23,6 +28,12 @@ function ScrollCarousel({ children }) {
         [],
     );
 
+    const [active, setActive] = useState(false);
+    useEffect(() => {
+        setTimeout(() => {
+            setActive(true);
+        }, 500);
+    }, []);
     const top = refHeight.current ? refHeight.current.offsetTop : 0;
     const width = refHeight.current ? refHeight.current.offsetWidth : 0;
     const elHeight = scrollWidth - (window.innerWidth - window.innerHeight) + width * 0.5;
@@ -34,7 +45,7 @@ function ScrollCarousel({ children }) {
         }
 
         if (Math.abs(x) > elHeight) {
-            return `translate3d(${elHeight -500}px, 0, 0)`;
+            return `translate3d(${elHeight - 500}px, 0, 0)`;
         }
 
         return `translate3d(${-x + -xy[0] / mouseMoveDepth}px, ${-xy[1] /
@@ -48,6 +59,120 @@ function ScrollCarousel({ children }) {
             ref={refHeight}
             style={{ height: elHeight - 500 }}
         >
+            {active ? (
+                <Particles
+                    params={{
+                        particles: {
+                            number: {
+                                value: 80,
+                                density: {
+                                    enable: true,
+                                    value_area: 800,
+                                },
+                            },
+                            color: {
+                                value: '#ffffff',
+                            },
+                            shape: {
+                                type: 'circle',
+                                stroke: {
+                                    width: 0,
+                                    color: '#000000',
+                                },
+                                polygon: {
+                                    nb_sides: 5,
+                                },
+                                image: {
+                                    src: 'img/github.svg',
+                                    width: 100,
+                                    height: 100,
+                                },
+                            },
+                            opacity: {
+                                value: 0.5,
+                                random: false,
+                                anim: {
+                                    enable: false,
+                                    speed: 1,
+                                    opacity_min: 0.1,
+                                    sync: false,
+                                },
+                            },
+                            size: {
+                                value: 3,
+                                random: true,
+                                anim: {
+                                    enable: false,
+                                    speed: 40,
+                                    size_min: 0.1,
+                                    sync: false,
+                                },
+                            },
+                            line_linked: {
+                                enable: true,
+                                distance: 150,
+                                color: '#ffffff',
+                                opacity: 0.4,
+                                width: 1,
+                            },
+                            move: {
+                                enable: true,
+                                speed: 6,
+                                direction: 'none',
+                                random: false,
+                                straight: false,
+                                out_mode: 'out',
+                                bounce: false,
+                                attract: {
+                                    enable: false,
+                                    rotateX: 600,
+                                    rotateY: 1200,
+                                },
+                            },
+                        },
+                        interactivity: {
+                            detect_on: 'canvas',
+                            events: {
+                                onhover: {
+                                    enable: true,
+                                    mode: 'repulse',
+                                },
+                                onclick: {
+                                    enable: true,
+                                    mode: 'push',
+                                },
+                                resize: true,
+                            },
+                            modes: {
+                                grab: {
+                                    distance: 400,
+                                    line_linked: {
+                                        opacity: 1,
+                                    },
+                                },
+                                bubble: {
+                                    distance: 400,
+                                    size: 40,
+                                    duration: 2,
+                                    opacity: 8,
+                                    speed: 3,
+                                },
+                                repulse: {
+                                    distance: 200,
+                                    duration: 0.4,
+                                },
+                                push: {
+                                    particles_nb: 4,
+                                },
+                                remove: {
+                                    particles_nb: 2,
+                                },
+                            },
+                        },
+                        retina_detect: true,
+                    }}
+                />
+            ) : null}
             <div className="sticky-box">
                 <a.div
                     style={{ transform: interpTransform }}
@@ -66,28 +191,28 @@ const StickySlider = () => (
         <ScrollCarousel>
             <div className="box">
                 <img
-                    src="https://fenixsmile.com.ua/wp-content/uploads/parodontologiya.jpg"
+                    src={slide1}
                     alt="slide"
                     className="img"
                 />
             </div>
             <div className="box">
                 <img
-                    src="https://fenixsmile.com.ua/wp-content/uploads/parodontologiya.jpg"
+                    src={slide2}
                     alt="slide"
                     className="img"
                 />
             </div>
             <div className="box">
                 <img
-                    src="https://fenixsmile.com.ua/wp-content/uploads/parodontologiya.jpg"
+                    src={slide3}
                     alt="slide"
                     className="img"
                 />
             </div>
             <div className="box">
                 <img
-                    src="https://fenixsmile.com.ua/wp-content/uploads/parodontologiya.jpg"
+                    src={slide4}
                     alt="slide"
                     className="img"
                 />

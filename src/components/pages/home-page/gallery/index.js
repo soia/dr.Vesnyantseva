@@ -65,6 +65,7 @@ const Gallery = () => {
             img: img9,
             title: 'Какой-то текст',
         },
+
         {
             img: img10,
             title: 'Какой-то текст',

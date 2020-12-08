@@ -770,7 +770,7 @@ span.ant-radio+* {
 
 #tsparticles {
     position: absolute;
-    height: 100vh;
+    height: inherit;
     width: 100vw;
     background: $blackColor;
 }
