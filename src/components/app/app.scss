@@ -766,3 +766,11 @@ span.ant-radio+* {
 }
 
 // Animation
+
+
+#tsparticles {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: $blackColor;
+}

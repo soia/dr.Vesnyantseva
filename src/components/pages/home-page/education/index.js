@@ -1,18 +1,21 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useSprings, animated, interpolate } from 'react-spring';
 import { useGesture } from 'react-use-gesture';
+import Particles from 'react-particles-js';
 import { useTranslation } from 'react-i18next';
+import diplom1 from './images/diplom.jpg';
+import diplom2 from './images/diplom2.jpg';
+import diplom3 from './images/diplom3.jpg';
+import diplom4 from './images/diplom4.jpg';
 import style from './style.module.scss';
-import './background.scss';
 
 const cards = [
-    'https://fainaidea.com/wp-content/uploads/2019/02/diplom.jpg',
-    'https://diplomukr.kiev.ua/wp-content/uploads/2020/02/attestat-scaled.jpg',
-    'https://dabi.gov.ua/wp-content/uploads/2018/11/dyp-2.jpg',
-    'https://martex.pro/wp-content/uploads/2018/12/nagradnye-diplomy-na-metalle.-diplom-na-derevjannoj-podlozhke-pegas-touristik-1.jpg',
-    'https://vesti.ua/wp-content/uploads/2015/07/106385.jpg',
-    'https://fainaidea.com/wp-content/uploads/2019/02/diplom.jpg',
+    diplom1,
+    diplom4,
+    diplom3,
+    diplom2,
+    diplom1,
 ];
 
 const to = i => ({
@@ -37,7 +40,12 @@ const Education = () => {
     const { t } = useTranslation();
     const [gone] = useState(() => new Set());
     const [props, set] = useSprings(cards.length, i => ({ ...to(i), from: from(i) }));
-
+    const [active, setActive] = useState(false);
+    useEffect(() => {
+        setTimeout(() => {
+            setActive(true);
+        }, 500);
+    }, []);
     const bind = useGesture(
         ({ args: [index], down, delta: [xDelta], direction: [xDir], velocity }) => {
             const trigger = velocity > 0.2;
@@ -65,19 +73,125 @@ const Education = () => {
 
     return (
         <div className={style.container} id="education">
+            {active ? (
+                <Particles
+                    params={{
+                        particles: {
+                            number: {
+                                value: 80,
+                                density: {
+                                    enable: true,
+                                    value_area: 800,
+                                },
+                            },
+                            color: {
+                                value: '#ffffff',
+                            },
+                            shape: {
+                                type: 'circle',
+                                stroke: {
+                                    width: 0,
+                                    color: '#000000',
+                                },
+                                polygon: {
+                                    nb_sides: 5,
+                                },
+                                image: {
+                                    src: 'img/github.svg',
+                                    width: 100,
+                                    height: 100,
+                                },
+                            },
+                            opacity: {
+                                value: 0.5,
+                                random: false,
+                                anim: {
+                                    enable: false,
+                                    speed: 1,
+                                    opacity_min: 0.1,
+                                    sync: false,
+                                },
+                            },
+                            size: {
+                                value: 3,
+                                random: true,
+                                anim: {
+                                    enable: false,
+                                    speed: 40,
+                                    size_min: 0.1,
+                                    sync: false,
+                                },
+                            },
+                            line_linked: {
+                                enable: true,
+                                distance: 150,
+                                color: '#ffffff',
+                                opacity: 0.4,
+                                width: 1,
+                            },
+                            move: {
+                                enable: true,
+                                speed: 6,
+                                direction: 'none',
+                                random: false,
+                                straight: false,
+                                out_mode: 'out',
+                                bounce: false,
+                                attract: {
+                                    enable: false,
+                                    rotateX: 600,
+                                    rotateY: 1200,
+                                },
+                            },
+                        },
+                        interactivity: {
+                            detect_on: 'canvas',
+                            events: {
+                                onhover: {
+                                    enable: true,
+                                    mode: 'repulse',
+                                },
+                                onclick: {
+                                    enable: true,
+                                    mode: 'push',
+                                },
+                                resize: true,
+                            },
+                            modes: {
+                                grab: {
+                                    distance: 400,
+                                    line_linked: {
+                                        opacity: 1,
+                                    },
+                                },
+                                bubble: {
+                                    distance: 400,
+                                    size: 40,
+                                    duration: 2,
+                                    opacity: 8,
+                                    speed: 3,
+                                },
+                                repulse: {
+                                    distance: 200,
+                                    duration: 0.4,
+                                },
+                                push: {
+                                    particles_nb: 4,
+                                },
+                                remove: {
+                                    particles_nb: 2,
+                                },
+                            },
+                        },
+                        retina_detect: true,
+                    }}
+                />
+            ) : null}
             <div className={style.wrapper}>
                 <h3 className={style.wrapper__title}>{t('myDiplomas')}</h3>
                 <h4 className={style.wrapper__subTitle}>{t('clickAndSlide')}</h4>
             </div>
 
-            <link
-                href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
-                rel="stylesheet"
-                type="text/css"
-            />
-            <div id="stars" />
-            <div id="stars2" />
-            <div id="stars3" />
             {props.map(({ x, y, rot, scale }, i) => (
                 <animated.span
                     key={i}
