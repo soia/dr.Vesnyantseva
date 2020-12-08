@@ -1,6 +1,7 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import { useSpring, animated } from 'react-spring';
 import style from './boxes.module.scss';
 
@@ -11,12 +12,19 @@ const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`;
 const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
 
 const Boxes = () => {
+    const { t } = useTranslation();
     const [props, set] = useSpring(() => ({
         xy: [0, 0],
         config: { mass: 10, tension: 550, friction: 140 },
     }));
+
     return (
         <div className={style.boxes} id="boxes">
+            <div className={style.boxes__leftSide}>
+                <h3 className={style.boxes__title}>
+                    {t('boxes')}
+                </h3>
+            </div>
             <div
                 className={style.container}
                 onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
