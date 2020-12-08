@@ -6,7 +6,6 @@ import SelectLangeage from '../../../language';
 import logo from '../../../assets/images/logos/white-logo.svg';
 import style from './header.module.scss';
 
-
 const Header = () => (
     <header className={style.header}>
         <div className={style.header__leftSide}>

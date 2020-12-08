@@ -1,7 +1,7 @@
 @import '../../assets/styles/variables';
 
 .footer {
-    background: $fuchsiaBlueColor;
+    background: $blackColor;
     padding: $desctop50px $desctop135px;
 
     @media only screen and (max-width: 499px) {
@@ -9,7 +9,7 @@
     }
 
     &__logo {
-        margin-right: $desctop160px;
+        margin-right: 8vw;
 
         @media only screen and (max-width: 499px) {
             width: 100%;
@@ -17,8 +17,8 @@
         }
 
         &_img {
-            width: $desctop60px;
-            height: $desctop24px;
+            width: 15vw;
+            height: 4vw;
 
             @media only screen and (max-width: 499px) {
                 width: $mobile60px;
@@ -29,7 +29,7 @@
 
     &__top {
         display: flex;
-        margin-bottom: $desctop60px;
+        margin-bottom: 6vw;
 
         @media only screen and (max-width: 499px) {
             flex-wrap: wrap;
@@ -93,6 +93,12 @@
         }
     }
 
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 16vw;
+    }
+
     &__title {
         display: flex;
         align-items: center;
@@ -123,6 +129,7 @@
 
     li {
         display: flex;
+        margin-right: 1vw;
     }
 
     &__link {
@@ -139,7 +146,7 @@
             }
 
             &:hover {
-                color: $fuchsiaBlueColor;
+                color: $shakespeareColor;
                 opacity: 1;
             }
         }
