@@ -5,12 +5,16 @@ import ImagesOnScroll from './images-on-scroll';
 import Education from './education';
 import StickySlider from './sticky-slider';
 import Boxes from './boxes';
+import Gallery from './gallery';
+import Blog from './blog';
 
 const HomePage = () => (
     <Fragment>
         <FirstScreen />
         <AboutMe />
         <Education />
+        <Blog />
+        <Gallery />
         <Boxes />
         <StickySlider />
         <ImagesOnScroll />

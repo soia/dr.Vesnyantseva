@@ -1,0 +1,18 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixin';
+
+.blog {
+    padding: $desctop100px $desctop20px $desctop124px;
+    position: relative;
+    height: 100vh;
+
+    &__title {
+        position: relative;
+        z-index: 10;
+        font-family: $Rounded700;
+        color: $blackColor;
+        font-size: $desctop36px;
+        margin-bottom: $desctop15px;
+        text-align: center;
+    }
+}

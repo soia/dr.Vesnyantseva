@@ -16,7 +16,7 @@ const Boxes = () => {
         config: { mass: 10, tension: 550, friction: 140 },
     }));
     return (
-        <div className={style.boxes}>
+        <div className={style.boxes} id="boxes">
             <div
                 className={style.container}
                 onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}

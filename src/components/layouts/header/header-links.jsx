@@ -49,25 +49,25 @@ class ListOfLinks extends Component {
             {
                 id: '3',
                 name: t('blog'),
-                path: '/',
+                path: '#blog',
                 icon: null,
             },
             {
                 id: '4',
                 name: t('gallery'),
-                path: '/',
+                path: '#gallery',
                 icon: null,
             },
             {
                 id: '5',
                 name: t('boxes'),
-                path: '/',
+                path: '#boxes',
                 icon: null,
             },
             {
                 id: '6',
                 name: t('contacts'),
-                path: '/',
+                path: '#contactss',
                 icon: null,
             },
         ];
