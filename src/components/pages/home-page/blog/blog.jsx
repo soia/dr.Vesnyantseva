@@ -46,11 +46,13 @@ class Blog extends Component {
         //     'https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=IGQVJWbmVFTGdSYkRCajU2bk93dHIzTHRiUjloQlJaQUJtaHBvVlZAIU2dGR0pFdG5TWkFiU01GWGxwbG9iSmFKc0VoLWhfdGxfWjRYdlhOcHJ1MHRFdUZAHRkp6VUhpekNwdy1UcG8taUl2dmNYcnhkRAZDZD',
         // );
         const response = await fetch(
-            'https://graph.instagram.com/me/media?fields=caption,id,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=IGQVJVcVpkSFU1Y3FzbGROWXpjSjdqODBZAa3VYZAU1kNEZACTGtUNkZA3dDB3SWNZANVZAxdzZAjZA1BHd0h2TlVkYXJtTWxBYktkdDVHUXUyX1YyNDhjNG1icUhRUm5IV25sdzVZAOWkySWdn',
+            'https://graph.instagram.com/me/media?fields=caption,id,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=IGQVJYVEphZAnFNSDVvbHZASRlZAXbmRHcFd4eHVkNWlRRTZAKbkJhdmU5bngwU1hLWElYTy02TEtrbmFjX0pxSzdpT1VlZATAyME9oRkRSYzRvVHZA6RXZA6enA4Ql80UXhqZAm43c3Vxa1h6YjhMTDJoWURXSgZDZD',
         );
 
         const user = await response.json();
-        const filterOnlyImage = user.data.filter(item => item.media_type === 'IMAGE');
+        const filterOnlyImage = user.data.filter(
+            item => item.media_type === 'IMAGE' || item.media_type === 'CAROUSEL_ALBUM',
+        );
 
         this.setState(
             {
