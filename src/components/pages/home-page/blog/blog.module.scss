@@ -28,17 +28,41 @@
         display: flex;
         flex-direction: column;
         width: 21vw;
-        box-shadow: 0 0 $desctop10px rgba(0,0,0,0.5);
+        box-shadow: 0 0 $desctop10px rgba(0,0,0,0.15);
+        border-radius: $desctop10px;
+        margin-bottom: $desctop50px;
+        transition: all 0.25s;
+        -webkit-backface-visibility: hidden;
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         &_img {
             width: 100%;
             height: 21vw;
             object-fit: cover;
         }
+
+        &_time {
+            padding: $desctop10px;
+            font-family: $Rounded500;
+            font-size: $desctop13px;
+            color: $blackColor;
+        }
+
+        &_caption {
+            padding:  0 $desctop10px $desctop20px $desctop10px;
+            font-family: $Rounded700;
+            font-size: $desctop14px;
+            line-height: $desctop20px;
+            color: $blackColor;
+        }
     }
 
     &__top {
         display: flex;
+        align-items: center;
         padding: $desctop10px;
 
         &_pic {
@@ -51,12 +75,6 @@
         &_username {
             font-family: $Rounded700;
             font-size: $desctop16px;
-            color: $blackColor;
-        }
-
-        &_location {
-            font-family: $Rounded400;
-            font-size: $desctop14px;
             color: $blackColor;
         }
     }
