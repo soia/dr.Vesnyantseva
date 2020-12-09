@@ -4,6 +4,7 @@
 .blog {
     padding: $desctop60px $desctop20px;
     position: relative;
+    min-height: 100vh;
 
     &__title {
         position: relative;
@@ -13,6 +14,26 @@
         font-size: $desctop36px;
         margin-bottom: $desctop15px;
         text-align: center;
+    }
+
+    &__loadMore {
+        font-family: $Rounded700;
+        margin: 0 auto;
+        display: flex;
+        border: $desctop2px solid $blackColor;
+        background-color: $blackColor;
+        color: $whiteColor;
+        padding: $desctop15px;
+        border-radius: $desctop20px;
+        outline: none;
+        cursor: pointer;
+        margin-top: $desctop20px;
+        transition: all 0.25s;
+
+        &:hover {
+            background-color: $whiteColor;
+            color: $blackColor;
+        }
     }
 }
 
