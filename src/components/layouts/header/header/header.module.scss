@@ -55,7 +55,6 @@
             display: flex;
             align-items: center;
             cursor: pointer;
-            padding: 0.9vw $desctop25px 0.9vw $desctop25px;
 
             &:hover {
                 .header__subLinks {
@@ -84,6 +83,7 @@
             font-size: $desctop11px;
             letter-spacing: $desctop1px;
             text-transform: uppercase;
+            padding: 0.9vw $desctop25px 0.9vw $desctop25px;
 
             &:hover {
                 color: $shakespeareColor;

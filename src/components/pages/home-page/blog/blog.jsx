@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import React, { Fragment, useEffect, useState } from 'react';
+import LinesEllipsis from 'react-lines-ellipsis';
 import { useTranslation } from 'react-i18next';
 import Moment from 'react-moment';
 import avatar from '../../../assets/images/portrets/portret.png';
@@ -66,18 +67,17 @@ const Blog = () => {
                                     alt="url"
                                 />
                                 <p className={style.insta__item_time}>
-                                    <Moment format="DD/MM/YYYY">
-                                        {timestamp}
-                                    </Moment>
+                                    <Moment format="DD/MM/YYYY">{timestamp}</Moment>
                                 </p>
-                                <p className={style.insta__item_caption}>
-                                Любая хирургическая операция в полости рта может нести в себе определённые риски и осложнения. К примеру, воспаление лунки (альвеолит) после удаления зуба, отторжение фрагмента слизистой после направленной мягкотканной пластики.
-
-                                Одной из причин этому может быть то, что очень часто полость рта пациента попросту не готова к хирургической манипуляции.
-
-                                Как минимизировать эти риски возникновения осложнений и подготовиться к оперативному. вмешательству?
-
-                                </p>
+                                <div className={style.insta__item_caption}>
+                                    <LinesEllipsis
+                                        text={caption}
+                                        maxLine="3"
+                                        ellipsis="..."
+                                        trimRight
+                                        basedOn="letters"
+                                    />
+                                </div>
                             </a>
                         );
                     })}
