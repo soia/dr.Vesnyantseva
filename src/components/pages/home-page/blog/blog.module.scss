@@ -2,9 +2,8 @@
 @import '../../../assets/styles/mixin';
 
 .blog {
-    padding: $desctop100px $desctop20px $desctop124px;
+    padding: $desctop60px $desctop20px;
     position: relative;
-    height: 100vh;
 
     &__title {
         position: relative;
@@ -14,5 +13,51 @@
         font-size: $desctop36px;
         margin-bottom: $desctop15px;
         text-align: center;
+    }
+}
+
+.insta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4vw 8vw 0vw;
+    position: relative;
+    z-index: 999;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 21vw;
+        box-shadow: 0 0 $desctop10px rgba(0,0,0,0.5);
+
+        &_img {
+            width: 100%;
+            height: 21vw;
+            object-fit: cover;
+        }
+    }
+
+    &__top {
+        display: flex;
+        padding: $desctop10px;
+
+        &_pic {
+            width: $desctop40px;
+            height: $desctop40px;
+            border-radius: 50%;
+            margin-right: $desctop15px;
+        }
+
+        &_username {
+            font-family: $Rounded700;
+            font-size: $desctop16px;
+            color: $blackColor;
+        }
+
+        &_location {
+            font-family: $Rounded400;
+            font-size: $desctop14px;
+            color: $blackColor;
+        }
     }
 }
