@@ -2,7 +2,7 @@
 
 .footer {
     background: $blackColor;
-    padding: $desctop50px $desctop135px;
+    padding: $desctop50px $desctop80px $desctop50px $desctop135px;
 
     @media only screen and (max-width: 499px) {
         padding: $mobile60px $mobile42px $mobile50px $mobile42px;
@@ -129,12 +129,15 @@
 
     li {
         display: flex;
+        align-items: center;
         margin-right: 1vw;
     }
 
     &__link {
 
         &>* {
+            display: flex;
+            align-items: center;
             font-family: $Rounded500;
             font-size: $desctop14px;
             line-height: $desctop34px;
@@ -149,6 +152,13 @@
                 color: $shakespeareColor;
                 opacity: 1;
             }
+        }
+
+        img {
+            width: $desctop25px;
+            height: $desctop25px;
+            margin-right: 1vw;
+            border-radius: $desctop6px;
         }
     }
 

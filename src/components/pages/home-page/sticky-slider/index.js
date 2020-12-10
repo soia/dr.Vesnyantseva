@@ -61,6 +61,7 @@ const ScrollCarousel = ({ children }) => {
             className="scroll-carousel"
             ref={refHeight}
             style={{ height: elHeight - 500 }}
+            id="specialization"
         >
             {active ? (
                 <Particles

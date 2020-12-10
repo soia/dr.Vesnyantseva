@@ -48,26 +48,26 @@ class ListOfLinks extends Component {
             },
             {
                 id: '3',
+                name: t('specialization'),
+                path: '#specialization',
+                icon: null,
+            },
+            {
+                id: '4',
                 name: t('blog'),
                 path: '#blog',
                 icon: null,
             },
             {
-                id: '4',
+                id: '5',
                 name: t('gallery'),
                 path: '#gallery',
                 icon: null,
             },
             {
-                id: '5',
+                id: '6',
                 name: t('boxes'),
                 path: '#boxes',
-                icon: null,
-            },
-            {
-                id: '6',
-                name: t('contacts'),
-                path: '#contactss',
                 icon: null,
             },
         ];

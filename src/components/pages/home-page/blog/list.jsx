@@ -13,6 +13,7 @@ const Posts = ({ postsToRender }) => (
                 caption, id, media_url, permalink, timestamp, username,
             } = item;
 
+
             return (
                 <a
                     href={permalink}
@@ -26,7 +27,6 @@ const Posts = ({ postsToRender }) => (
                         <p className={style.insta__top_username}>{username}</p>
                     </div>
                     <img className={style.insta__item_img} src={media_url} alt="url" />
-
                     <p className={style.insta__item_time}>
                         <Moment format="DD/MM/YYYY">{timestamp}</Moment>
                     </p>

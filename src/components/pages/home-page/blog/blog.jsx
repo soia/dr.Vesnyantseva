@@ -50,13 +50,9 @@ class Blog extends Component {
         );
 
         const user = await response.json();
-        const filterOnlyImage = user.data.filter(
-            item => item.media_type === 'IMAGE' || item.media_type === 'CAROUSEL_ALBUM',
-        );
-
         this.setState(
             {
-                insta: filterOnlyImage,
+                insta: user.data,
             },
             () => {
                 this.loopWithSlice(0, postsPerPage);
