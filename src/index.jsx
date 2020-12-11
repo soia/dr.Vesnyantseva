@@ -11,8 +11,9 @@ import ErrorBoundry from './components/pages/error-page/error-boundry';
 import Spinner from './components/spinner';
 import store from './store';
 import './i18n';
-
 import './components/app/app.scss';
+
+require('es7-object-polyfill');
 
 const getService = new GetService();
 const postService = new PostService();
