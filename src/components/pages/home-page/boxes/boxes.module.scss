@@ -7,12 +7,27 @@
     height: 100vh;
     min-height: 55vw;
 
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        padding: $tablet80px $tablet20px;
+        height: initial;
+        min-height: initial;
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
     &__title {
         font-family: $Rounded700;
         color: $blackColor;
         font-size: $desctop36px;
         margin-bottom: $desctop15px;
         text-align: center;
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            font-size: $tablet30px;
+            margin-bottom: $tablet14px;
+        }
     }
 
     &__subTitle {
@@ -23,15 +38,28 @@
         text-align: center;
         max-width: 70%;
         margin: 0 auto;
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            font-size: $tablet20px;
+            max-width: 90%;
+        }
     }
 
-	&__leftSide {
-		width: 50vw;
+    &__leftSide {
+        width: 50vw;
         margin-left: auto;
 
         &_img {
             width: 100%;
             object-fit: none;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                object-fit: contain;
+                width: 95%;
+                margin: 4vw auto;
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 
@@ -54,6 +82,14 @@
             margin-top: $desctop20px;
             transition: all 0.25s;
             width: fit-content;
+            font-size: $desctop16px;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                padding: $tablet14px $tablet30px;
+                border-radius: $tablet20px;
+                margin-top: $tablet20px;
+                font-size: $tablet16px;
+            }
 
 
             &:hover {
@@ -66,6 +102,11 @@
             border: $desctop2px solid $shakespeareColor;
             background-color: $shakespeareColor;
 
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                margin-right: $tablet40px;
+                border: $tablet2px solid $shakespeareColor;
+            }
+
             &:hover {
                 color: $shakespeareColor;
             }
@@ -74,6 +115,10 @@
         button {
             border: $desctop2px solid $greenColor;
             background-color: $greenColor;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                border: $tablet2px solid $greenColor;
+            }
 
             &:hover {
                 color: $greenColor;
@@ -92,6 +137,10 @@
     background-position: center center;
     background-repeat: no-repeat;
     will-change: transform;
+
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        border-radius: $tablet5px;
+    }
 }
 
 .card1 {
@@ -99,6 +148,13 @@
     height: 40vw;
     background-image: url('./images/giftbox.svg');
     left: 1vw;
+
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        width: 35vw;
+        height: 35vw;
+        left: -4vw;
+        top: 0;
+    }
 }
 
 .card2 {
@@ -107,15 +163,28 @@
     background-image: url('./images/toothpaste.svg');
     left: 20vw;
     top: 27vw;
+
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        width: 15vw;
+        height: 15vw;
+        left: -4vw;
+        top: 5vw;
+    }
 }
 
 .card3 {
-    opacity: 0.9;
     width: 20vw;
     height: 20vw;
     background-image: url('./images/toothbrush.svg');
     left: 42vw;
     top: 22vw;
+
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        width: 15vw;
+        height: 15vw;
+        left: 19vw;
+        top: 2vw;
+    }
 }
 
 .card4 {
@@ -124,6 +193,13 @@
     background-image: url('./images/dental-floss.svg');
     left: 40vw;
     bottom: -6vw;
+
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        width: 10vw;
+        height: 10vw;
+        left: 16vw;
+        top: 24vw;
+    }
 }
 
 .card5 {
@@ -133,6 +209,13 @@
     background-image: url('./images/mouthwash.svg');
     bottom: -6vw;
     left: 20vw;
+
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        width: 10vw;
+        height: 10vw;
+        left: 0vw;
+        top: 22vw;
+    }
 }
 
 .container {
@@ -144,4 +227,11 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        position: relative;
+        width: initial;
+        height: initial;
+        top: 8vw;
+    }
 }

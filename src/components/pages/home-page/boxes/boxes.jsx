@@ -21,6 +21,8 @@ const Boxes = () => {
         config: { mass: 10, tension: 550, friction: 140 },
     }));
 
+    const desctopWidth = window.innerWidth > 1024;
+
     return (
         <div className={style.boxes} id="boxes">
             <div className={style.boxes__leftSide}>
@@ -38,23 +40,23 @@ const Boxes = () => {
             >
                 <animated.div
                     className={style.card1}
-                    style={{ transform: props.xy.interpolate(trans1) }}
+                    style={desctopWidth ? { transform: props.xy.interpolate(trans1) } : {}}
                 />
                 <animated.div
                     className={style.card2}
-                    style={{ transform: props.xy.interpolate(trans2) }}
+                    style={desctopWidth ? { transform: props.xy.interpolate(trans2) } : {}}
                 />
                 <animated.div
                     className={style.card3}
-                    style={{ transform: props.xy.interpolate(trans3) }}
+                    style={desctopWidth ? { transform: props.xy.interpolate(trans3) } : {}}
                 />
                 <animated.div
                     className={style.card4}
-                    style={{ transform: props.xy.interpolate(trans4) }}
+                    style={desctopWidth ? { transform: props.xy.interpolate(trans4) } : {}}
                 />
                 <animated.div
                     className={style.card5}
-                    style={{ transform: props.xy.interpolate(trans5) }}
+                    style={desctopWidth ? { transform: props.xy.interpolate(trans5) } : {}}
                 />
             </div>
         </div>

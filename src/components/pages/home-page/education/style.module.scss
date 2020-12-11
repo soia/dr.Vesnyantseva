@@ -11,6 +11,11 @@
     height: 100vh;
     cursor: url('./cursor.png') 39 39, auto;
 
+
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        height: 75vh;
+    }
+
     &>span {
         position: absolute;
         bottom: 8vh;
@@ -18,6 +23,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            bottom: 7vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         &>span {
             background-color: transparent;
@@ -28,6 +41,14 @@
             height: 70vh;
             will-change: transform;
             border-radius: $desctop10px;
+
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                width: 50vh;
+                height: 50vh;
+                border-radius: $tablet10px;
+            }
+
         }
     }
 }
@@ -41,16 +62,29 @@
     align-items: center;
     margin-top: $desctop60px;
 
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        margin-top: $tablet60px;
+    }
+
     &__title {
         font-family: $Rounded700;
         color: $whiteColor;
         font-size: $desctop36px;
         margin-bottom: $desctop15px;
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            font-size: $tablet30px;
+            margin-bottom: $tablet14px;
+        }
     }
 
     &__subTitle {
         font-family: $Rounded500;
         color: $whiteColor;
         font-size: $desctop24px;
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            font-size: $tablet20px;
+        }
     }
 }

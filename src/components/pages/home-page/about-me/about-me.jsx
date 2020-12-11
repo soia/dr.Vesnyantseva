@@ -36,7 +36,7 @@ const AboutMe = () => {
                     className="hooks-main"
                     onMouseMove={e => set({ xy: [e.clientX, e.clientY] })}
                 >
-                    {trail.map((props, index) => (
+                    {window.innerWidth > 1024 && trail.map((props, index) => (
                         <animated.div
                             key={index}
                             style={{ transform: props.xy.interpolate(trans) }}

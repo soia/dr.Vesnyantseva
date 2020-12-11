@@ -4,12 +4,20 @@
     background: $blackColor;
     padding: $desctop50px $desctop80px $desctop50px $desctop135px;
 
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        padding: $tablet30px;
+    }
+
     @media only screen and (max-width: 499px) {
         padding: $mobile60px $mobile42px $mobile50px $mobile42px;
     }
 
     &__logo {
         margin-right: 8vw;
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            margin-right: 6vw;
+        }
 
         @media only screen and (max-width: 499px) {
             width: 100%;
@@ -19,6 +27,11 @@
         &_img {
             width: 15vw;
             height: 4vw;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                width: 23vw;
+                height: 6vw;
+            }
 
             @media only screen and (max-width: 499px) {
                 width: $mobile60px;
@@ -51,6 +64,11 @@
             line-height: $desctop16px;
             color: $whiteColor;
             width: 100%;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                font-size: $tablet14px;
+                line-height: $tablet16px;
+            }
 
             @media only screen and (max-width: 499px) {
                 font-family: $Rounded400;
@@ -108,6 +126,12 @@
         color: $whiteColor;
         margin-bottom: $desctop9px;
 
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            font-size: $tablet12px;
+            line-height: $tablet20px;
+            margin-bottom: $tablet5px;
+        }
+
         @media only screen and (max-width: 499px) {
             font-size: $mobile16px;
             line-height: $mobile24px;
@@ -143,6 +167,11 @@
             line-height: $desctop34px;
             color: rgba(255, 255, 255, 0.5);
 
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                font-size: $tablet10px;
+                line-height: $tablet20px;
+            }
+
             @media only screen and (max-width: 499px) {
                 font-size: $mobile12px;
                 line-height: $mobile30px;
@@ -159,6 +188,13 @@
             height: $desctop25px;
             margin-right: 1vw;
             border-radius: $desctop6px;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                width: $tablet16px;
+                height: $tablet16px;
+                margin-right: 1.5vw;
+                border-radius: $tablet5px;
+            }
         }
     }
 
@@ -167,6 +203,11 @@
         font-size: $desctop14px;
         line-height: $desctop34px;
         color: rgba(255, 255, 255, 0.5);
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            font-size: $tablet10px;
+            line-height: $tablet20px;
+        }
 
         @media only screen and (max-width: 499px) {
             font-size: $mobile12px;

@@ -71,6 +71,7 @@
             font-size: $desctop36px;
             color: $blackColor;
             margin-bottom: $desctop15px;
+            white-space: nowrap;
 
             @media only screen and (min-width: 500px) and (max-width: 1024px) {
                 font-size: $desctop40px;
