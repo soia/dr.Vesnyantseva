@@ -5,6 +5,7 @@
     padding: $desctop100px $desctop20px $desctop124px;
     position: relative;
     height: 100vh;
+    min-height: 60vw;
 
     &__title {
         font-family: $Rounded700;
@@ -33,32 +34,44 @@
 }
 
 .card1 {
-    width: 45vw;
-    height: 45vw;
-    background-image: url(https://image.flaticon.com/icons/svg/119/119596.svg);
+    width: 40vw;
+    height: 40vw;
+    background-image: url('./images/giftbox.svg');
     left: 1vw;
 }
 
 .card2 {
     width: 20vw;
     height: 20vw;
-    background-image: url(https://image.flaticon.com/icons/svg/789/789395.svg);
-    left: 23vw;
+    background-image: url('./images/toothpaste.svg');
+    left: -2vw;
+    top: 31vw;
 }
 
 .card3 {
     opacity: 0.9;
     width: 20vw;
     height: 20vw;
-    background-image: url(https://image.flaticon.com/icons/svg/414/414927.svg);
-    left: 18vw;
+    background-image: url('./images/toothbrush.svg');
+    left: 42vw;
+    top: 25vw;
 }
 
 .card4 {
-    width: 20vw;
-    height: 20vw;
-    background-image: url(https://image.flaticon.com/icons/svg/789/789392.svg);
-    left: 17vw;
+    width: 15vw;
+    height: 15vw;
+    background-image: url('./images/dental-floss.svg');
+    left: 20vw;
+    bottom: 12vw;
+}
+
+.card5 {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    background-image: url('./images/mouthwash.svg');
+    bottom: -2vw;
+    left: 20vw;
 }
 
 .container {
