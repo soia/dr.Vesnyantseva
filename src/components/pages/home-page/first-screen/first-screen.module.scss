@@ -8,6 +8,10 @@
     overflow: hidden;
     z-index: 1;
 
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        height: calc(50vw);
+    }
+
     @media only screen and (max-width: 499px) {
         height: 60vw;
     }
@@ -30,6 +34,10 @@
         width: $desctop90px;
         cursor: pointer;
         z-index: 10;
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            width: $tablet70px;
+        }
     }
 }
 
@@ -41,6 +49,10 @@
     position: relative;
     z-index: 2;
 
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        height: calc(50vw);
+    }
+
     &__content{
         display: flex;
         flex-direction: column;
@@ -50,17 +62,29 @@
         width: 35vw;
         height: $desctop200px;
 
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            width: 40vw;
+        }
+
         &_title {
             font-family: $Rounded700;
             font-size: $desctop36px;
             color: $blackColor;
             margin-bottom: $desctop15px;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                font-size: $desctop40px;
+            }
         }
 
         &_subTitle {
             font-family: $Rounded500;
             font-size: $desctop24px;
             color: $blackColor;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                font-size: $desctop32px;
+            }
         }
     }
 }

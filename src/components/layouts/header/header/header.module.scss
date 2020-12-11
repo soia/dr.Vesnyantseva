@@ -11,6 +11,11 @@
     position: relative;
     z-index: 99999;
 
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        height: $tablet80px;
+        padding: 0 $tablet30px;
+    }
+
     @media only screen and (max-width: 499px) {
         height: $mobile70px;
         padding: 0 $mobile20px 0 $mobile20px;
@@ -31,6 +36,10 @@
     &__logo {
         margin-right: $desctop70px;
 
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            margin-right: $tablet10px;
+        }
+
         a {
             display: block;
         }
@@ -38,6 +47,11 @@
         &_img {
             width: $desctop200px;
             height: $desctop70px;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                width: $tablet200px;
+                height: $tablet70px;
+            }
 
             @media only screen and (max-width: 499px) {
                 width: $mobile70px;
@@ -68,13 +82,6 @@
                     color: $shakespeareColor;
                 }
             }
-
-            img {
-                position: absolute;
-                width: 2vw;
-                top: -1vw;
-                right: -0.5vw;
-            }
         }
 
         &_item>* {
@@ -84,6 +91,12 @@
             letter-spacing: $desctop1px;
             text-transform: uppercase;
             padding: 0.9vw $desctop25px 0.9vw $desctop25px;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                font-size: $tablet9px;
+                letter-spacing: $tablet1px;
+                padding: $tablet12px
+            }
 
             &:hover {
                 color: $shakespeareColor;

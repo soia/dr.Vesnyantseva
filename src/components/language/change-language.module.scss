@@ -20,6 +20,13 @@
         border-radius: 50%;
         box-sizing: content-box;
 
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            width: $tablet20px;
+            height: $tablet20px;
+            border: $tablet1px solid rgba(241, 241, 241, 0.4);
+        }
+
         @media only screen and (max-width: 499px) {
             width: $mobile21px;
             height: $mobile21px;
