@@ -42,3 +42,37 @@
     color: $whiteColor;
     font-size: $desctop36px;
 }
+
+.specialization {
+    &__title {
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            font-family: $Rounded700;
+            color: $whiteColor;
+            position: relative;
+            text-align: center;
+            font-size: $tablet30px;
+            padding: $tablet40px 0 $tablet60px;
+        }
+    }
+}
+
+#specialization {
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        height: 120vw;
+    }
+}
+
+.specializationWr {
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        width: 90vw;
+        margin: 0 auto;
+
+        .box {
+            margin: 0 0 $tablet40px;
+        }
+    }
+}
