@@ -45,19 +45,23 @@ class Blog extends Component {
         // const response = await fetch(
         //     'https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=IGQVJWbmVFTGdSYkRCajU2bk93dHIzTHRiUjloQlJaQUJtaHBvVlZAIU2dGR0pFdG5TWkFiU01GWGxwbG9iSmFKc0VoLWhfdGxfWjRYdlhOcHJ1MHRFdUZAHRkp6VUhpekNwdy1UcG8taUl2dmNYcnhkRAZDZD',
         // );
-        const response = await fetch(
-            'https://graph.instagram.com/me/media?fields=caption,id,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=IGQVJYVEphZAnFNSDVvbHZASRlZAXbmRHcFd4eHVkNWlRRTZAKbkJhdmU5bngwU1hLWElYTy02TEtrbmFjX0pxSzdpT1VlZATAyME9oRkRSYzRvVHZA6RXZA6enA4Ql80UXhqZAm43c3Vxa1h6YjhMTDJoWURXSgZDZD',
-        );
+        try {
+            const response = await fetch(
+                'https://graph.instagram.com/me/media?fields=caption,id,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=IGQVJYVEphZAnFNSDVvbHZASRlZAXbmRHcFd4eHVkNWlRRTZAKbkJhdmU5bngwU1hLWElYTy02TEtrbmFjX0pxSzdpT1VlZATAyME9oRkRSYzRvVHZA6RXZA6enA4Ql80UXhqZAm43c3Vxa1h6YjhMTDJoWURXSgZDZD',
+            );
 
-        const user = await response.json();
-        this.setState(
-            {
-                insta: user.data,
-            },
-            () => {
-                this.loopWithSlice(0, postsPerPage);
-            },
-        );
+            const user = await response.json();
+            this.setState(
+                {
+                    insta: user.data,
+                },
+                () => {
+                    this.loopWithSlice(0, postsPerPage);
+                },
+            );
+        } catch (e) {
+            alert(e, 'error');
+        }
     };
 
     loopWithSlice = (start, end) => {
