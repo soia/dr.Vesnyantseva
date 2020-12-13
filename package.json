@@ -38,6 +38,7 @@
         "react-router-dom": "^5.0.0",
         "react-scripts": "3.0.1",
         "react-scrollmagic": "^2.2.0",
+        "react-slick": "^0.27.13",
         "react-spring": "8.0.2",
         "react-syntax-highlighter": "^15.3.0",
         "react-tilt": "^0.1.4",
@@ -47,6 +48,7 @@
         "redux-logger": "^3.0.6",
         "redux-thunk": "^2.3.0",
         "rxjs": "^6.6.3",
+        "slick-carousel": "^1.8.1",
         "user-instagram": "^2.1.8"
     },
     "scripts": {

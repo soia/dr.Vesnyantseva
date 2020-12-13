@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Coverflow from 'react-coverflow';
+import Slider from 'react-slick';
 import img1 from './images/1.jpeg';
 import img2 from './images/2.JPG';
 import img3 from './images/3.JPG';
@@ -27,6 +28,15 @@ import './background.scss';
 
 const Gallery = () => {
     const { t } = useTranslation();
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        centerPadding: '60px',
+    };
 
     const gallery = [
         {
@@ -116,33 +126,40 @@ const Gallery = () => {
         },
     ];
 
+    const desctopWidth = window.innerWidth > 1024;
+
     return (
         <div className={style.container} id="gallery">
             <div className={style.wrapper}>
                 <h3 className={style.wrapper__title}>{t('gallery')}</h3>
             </div>
-            <div className={style.slider}>
-                <Coverflow
-                    displayQuantityOfSide={2}
-                    navigation={false}
-                    enableScroll={false}
-                    clickable
-                    infiniteScroll
-                    active={0}
-                >
+
+            {desctopWidth ? (
+                <div className={style.slider}>
+                    <Coverflow
+                        displayQuantityOfSide={2}
+                        navigation={false}
+                        enableScroll={false}
+                        clickable
+                        infiniteScroll
+                        active={0}
+                    >
+                        {gallery.map(item => {
+                            const { img, title } = item;
+
+                            return <img key={img} src={img} alt={title} />;
+                        })}
+                    </Coverflow>
+                </div>
+            ) : (
+                <Slider {...settings}>
                     {gallery.map(item => {
                         const { img, title } = item;
-
-                        return (
-                            <img
-                                key={img}
-                                src={img}
-                                alt={title}
-                            />
-                        );
+                        return <img key={img} src={img} alt={title} />;
                     })}
-                </Coverflow>
-            </div>
+                </Slider>
+            )}
+
             <link
                 href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
                 rel="stylesheet"

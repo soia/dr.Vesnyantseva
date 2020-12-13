@@ -9,7 +9,7 @@
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 
     @media only screen and (min-width: 500px) and (max-width: 1024px) {
-        height: 62vh;
+        height: 55vh;
     }
 
     &>span {
@@ -43,6 +43,14 @@
     align-items: center;
     margin-top: $desctop60px;
 
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        position: initial;
+        left: initial;
+        transform: initial;
+        margin-bottom: 4vw;
+        margin-top: 7vw;
+    }
+
     &__title {
         font-family: $Rounded700;
         color: $whiteColor;
@@ -61,13 +69,13 @@
     top: 0;
     bottom: 0;
 
-    & > div > div > div {
+    &>div>div>div {
         width: 100vw !important;
         height: 100vh !important;
     }
 
 
-    & > div > div > div > div {
+    &>div>div>div>div {
         @media only screen and (min-width: 500px) and (max-width: 1024px) {
             height: 63%;
         }
@@ -78,6 +86,8 @@
     }
 
     figure {
-        width: 30vw !important;
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            width: 30vw !important;
+        }
     }
 }

@@ -774,3 +774,62 @@ span.ant-radio+* {
     width: 100vw;
     background: $blackColor;
 }
+
+
+#gallery {
+    .slick-slider.slick-initialized {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .slick-list {
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            margin: 0 -2.61vw;
+        }
+
+    }
+
+    .slick-slide>div {
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            padding: 0 2.61vw;
+        }
+	}
+
+	img {
+		@media only screen and (min-width: 500px) and (max-width: 1024px) {
+			border-radius: 5vw;
+		}
+	}
+
+	.slick-next {
+		@media only screen and (min-width: 500px) and (max-width: 1024px) {
+			right: -5.21vw;
+		}
+    }
+
+	.slick-prev {
+		@media only screen and (min-width: 500px) and (max-width: 1024px) {
+			left: -7.21vw;
+		}
+	}
+
+	.slick-prev:before,
+	.slick-next:before {
+		font-size: 5.21vw;
+    }
+
+    .slick-dots li button:before {
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            top: 3vw;
+            color: $whiteColor;
+            opacity: 0.5;
+            font-size: $tablet10px;
+        }
+    }
+
+    .slick-dots li.slick-active button:before {
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            opacity: 1 !important;
+        }
+    }
+}

@@ -12,6 +12,8 @@ import './app.scss';
 import './pagination.scss';
 import '../assets/styles/fonts.scss';
 import 'react-notifications-component/dist/theme.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 class App extends Component {
     state = {
