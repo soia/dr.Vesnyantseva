@@ -60,7 +60,7 @@ class Blog extends Component {
                 },
             );
         } catch (e) {
-            alert(e, 'error');
+            console.log(e, 'error');
         }
     };
 
