@@ -6,6 +6,11 @@
     position: relative;
     min-height: 100vh;
 
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        padding: $tablet40px 0 $tablet80px 0;
+        min-height: initial;
+    }
+
     &__title {
         position: relative;
         z-index: 10;
@@ -14,6 +19,11 @@
         font-size: $desctop36px;
         margin-bottom: $desctop15px;
         text-align: center;
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            font-size: $tablet26px;
+            margin-bottom: $tablet40px;
+        }
     }
 
     &__loadMore {
@@ -30,6 +40,15 @@
         margin-top: $desctop20px;
         transition: all 0.25s;
         width: fit-content;
+        font-size: $desctop16px;
+
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            border: $tablet2px solid $blackColor;
+            padding: $tablet16px $tablet40px;
+            border-radius: $tablet20px;
+            margin-top: $tablet20px;
+            font-size: $tablet16px;
+        }
 
         a {
             color: $whiteColor;
@@ -50,9 +69,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 4vw 8vw 0vw;
+    padding: 4vw 8vw 0;
     position: relative;
     z-index: 999;
+
+    @media only screen and (min-width: 500px) and (max-width: 1024px) {
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
 
     &__item {
         display: flex;
@@ -64,6 +89,13 @@
         transition: all 0.4s;
         -webkit-backface-visibility: hidden;
 
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            width: 43vw;
+            box-shadow: 0 0 $tablet10px rgba(0,0,0,0.15);
+            border-radius: $tablet10px;
+            margin-bottom: $tablet50px;
+        }
+
         &:hover {
             transform: scale(1.1);
         }
@@ -72,6 +104,10 @@
             width: 100%;
             height: 21vw;
             object-fit: cover;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                height: 40vw;
+            }
         }
 
         &_time {
@@ -79,6 +115,11 @@
             font-family: $Rounded500;
             font-size: $desctop13px;
             color: $blackColor;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                padding: $tablet10px;
+                font-size: $tablet14px;
+            }
         }
 
         &_caption {
@@ -87,6 +128,12 @@
             font-size: $desctop14px;
             line-height: $desctop20px;
             color: $blackColor;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                padding:  0 $tablet10px $tablet20px $tablet10px;
+                font-size: $tablet16px;
+                line-height: $tablet20px;
+            }
         }
     }
 
@@ -95,17 +142,31 @@
         align-items: center;
         padding: $desctop10px;
 
+        @media only screen and (min-width: 500px) and (max-width: 1024px) {
+            padding: $tablet10px;
+        }
+
         &_pic {
             width: $desctop40px;
             height: $desctop40px;
             border-radius: 50%;
             margin-right: $desctop15px;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                width: $tablet40px;
+                height: $tablet40px;
+                margin-right: $tablet16px;
+            }
         }
 
         &_username {
             font-family: $Rounded700;
             font-size: $desctop16px;
             color: $blackColor;
+
+            @media only screen and (min-width: 500px) and (max-width: 1024px) {
+                font-size: $tablet16px;
+            }
         }
     }
 }
