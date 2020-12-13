@@ -7,6 +7,7 @@ import HomePage from '../pages/home-page/home-page';
 import Header from '../layouts/header';
 import Footer from '../layouts/footer';
 import LoadingScreen from '../loading-screen';
+import 'whatwg-fetch';
 import '../assets/styles/reset.scss';
 import './app.scss';
 import './pagination.scss';

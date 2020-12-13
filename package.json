@@ -49,7 +49,8 @@
         "redux-thunk": "^2.3.0",
         "rxjs": "^6.6.3",
         "slick-carousel": "^1.8.1",
-        "user-instagram": "^2.1.8"
+        "user-instagram": "^2.1.8",
+        "whatwg-fetch": "^3.5.0"
     },
     "scripts": {
         "start": "react-scripts start",
